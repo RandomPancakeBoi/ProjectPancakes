@@ -1,0 +1,229 @@
+@ -0,0 +1,228 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: antiquewhite;
+    line-height: 1.5;
+    overflow-x: hidden;
+    position: relative; /* Make the body the containing block */
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #747373; /* Dark background */
+    z-index: -2; /* Place behind everything */
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(117, 19, 93, 0.73), rgba(256, 238, 89, 0.52)); /* Gradient overlay */
+    z-index: -1; /* Place above the dark background */
+}
+
+/* Announcement Banner */
+.announcement-banner {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: antiquewhite;
+    padding: 10px 20px;
+    text-align: center; /* Center-align the text */
+    font-weight: bold; /* Highlight the banner */
+    font-size: 1em; /* Adjust text size */
+    z-index: 1000;
+    height: 50px; /* Set fixed height for the banner */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    visibility: hidden;
+    opacity: 0;
+    transition: height 0.8s ease, opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.announcement-banner.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically center the logo and hamburger */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    padding: 0 20px; /* Ensure padding on the left and right */
+    height: 50px; /* Match the height of the banner */
+}
+
+/* Menu Lines */
+.One {
+    width: 25px;
+}
+
+.Two {
+    width: 15px;
+}
+
+.Three {
+    width: 5px;
+}
+
+/* Menu and Logo Alignment */
+.logo img {
+    max-width: 85px; /* Limit the logo's width to 150px */
+    width: 100%; /* Allow the logo to scale down if necessary */
+    height: auto; /* Ensure the height adjusts accordingly */
+    padding-top: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between hamburger and logo */
+    position: relative; /* Ensure positioning context for dropdown */
+}
+
+.nav div {
+    height: 4px;
+    background-color: antiquewhite;
+    margin: 5px;
+    border-radius: 25px;
+    transition: 0.25s;
+}
+
+.nav {
+    width: 30px;
+    display: inline-block;
+    margin: 0.5em 0 0 0.5em;
+    cursor: pointer;
+}
+
+.nav:hover div {
+    width: 30px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    position: absolute;
+    top: 42px; /* Adjust to appear just below the hamburger */
+    left: -5px; /* Align to the left of the hamburger */
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: none; /* Hide by default */
+    flex-direction: column;
+    z-index: 1000;
+    width: 150px;
+}
+
+/* Show the dropdown when the parent element is hovered */
+.menu:hover .dropdown-menu {
+    display: block; /* Make the dropdown visible */
+}
+
+/* Dropdown Item Styles */
+.dropdown-item {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    align-self: auto;
+    display: inline-block;
+    color: antiquewhite;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+    transition: background 0.2s ease;
+    width: 100%;
+}
+
+.dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content */
+.central-container {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.central-image {
+    max-width: 650px; /* Limit the width to 250px */
+    width: 100%; /* Allow the image to scale down */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0;
+}
+
+.central-text {
+    margin-top: 0px;
+    font-size: 17px;
+}
+
+/* Social Media Section */
+.social-media {
+    text-align: center;
+    margin: 75px 0;
+}
+
+.social-icon {
+    margin: 0 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.social-icon img {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.0);
+    transition: background 0.3s ease;
+    display: block; 
+}
+
+.social-icon img/*:hover*/ {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: transparent; /* Fully transparent */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 11px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .central-text {
+        font-size: 1em;
+    }
+}
