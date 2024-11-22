@@ -205,7 +205,7 @@ header {
     display: block; 
 }
 
-.social-icon img/*:hover*/ {
+.social-icon img:hover {
     background: rgba(255, 255, 255, 0.4);
 }
 
