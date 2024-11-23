@@ -165,24 +165,7 @@ header {
 }
 
 /* Main Content */
-.central-container {
-    text-align: center;
-    margin: 25px auto;
-}
 
-.central-image {
-    max-width: 650px; /* Limit the width to 250px */
-    width: 100%; /* Allow the image to scale down */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    margin-top: 0;
-}
-
-.central-text {
-    margin-top: 0px;
-    font-size: 17px;
-}
 
 /* Social Media Section */
 .social-media {

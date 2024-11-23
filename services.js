@@ -11,4 +11,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         banner.classList.remove("visible"); // Remove class to make banner disappear
     }, 15000);
-});
+}); 
