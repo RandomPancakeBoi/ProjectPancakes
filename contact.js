@@ -1,19 +1,30 @@
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("emailForm");
+    const submitButton = document.getElementById("submitButton");
 
-    const formData = new FormData(form);
+    // Enable the submit button if all required fields are filled
+    form.addEventListener("input", () => {
+        const isValid = form.checkValidity();
+        submitButton.disabled = !isValid;
+    });
 
-    fetch("https://formsubmit.co/goodwin3117+forms@gmail.com", {
-        method: "POST",
-        body: formData,
-    })
-        .then(response => {
-            if (response.ok) {
-                alert("Form submitted successfully!");
-                form.reset();
-            } else {
-                alert("Failed to submit the form.");
-            }
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+    
+        const formData = new FormData(form);
+    
+        fetch("https://formsubmit.co/goodwin3117+forms@gmail.com", {
+            method: "POST",
+            body: formData,
         })
-        .catch(() => alert("There was an error submitting the form."));
+            .then(response => {
+                if (response.ok) {
+                    alert("Form submitted successfully!");
+                    form.reset();
+                } else {
+                    alert("Failed to submit the form.");
+                }
+            })
+            .catch(() => alert("There was an error submitting the form."));
+    });
 });
