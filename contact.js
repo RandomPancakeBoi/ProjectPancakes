@@ -2,11 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("emailForm");
     const submitButton = document.getElementById("submitButton");
 
-    // Enable the submit button if all required fields are filled
-    form.addEventListener("input", () => {
+    // Function to check form validity
+    const checkFormValidity = () => {
         const isValid = form.checkValidity();
-        submitButton.disabled = !isValid;
-    });
+        submitButton.disabled = !isValid;  // Disable button if form is not valid
+    };
+
+    // Check form validity on any input change
+    form.addEventListener("input", checkFormValidity);
+
+    // Initial check when the form is loaded
+    checkFormValidity();
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -21,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => {
             if (response.ok) {
                 alert("Form submitted successfully!");
-                form.reset();
-                submitButton.disabled = true;
+                form.reset();  // Reset form fields
+                submitButton.disabled = true;  // Disable the submit button after successful submit
             } else {
                 alert("There was an error submitting the form.");
             }
