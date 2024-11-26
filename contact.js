@@ -1,43 +1,67 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("emailForm");
+    const emailForm = document.getElementById("emailForm");
     const submitButton = document.getElementById("submitButton");
 
-    // Function to check form validity
+    const forenameInput = document.getElementById("forename");
+    const surnameInput = document.getElementById("surname");
+    const emailInput = document.getElementById("email");
+    const optionsSelect = document.getElementById("options");
+    const detailsTextArea = document.getElementById("details");
+    const fileUploadInput = document.getElementById("fileUpload");
+
+    // Check form validity and enable/disable the submit button
     const checkFormValidity = () => {
-        const isValid = form.checkValidity();
-        submitButton.disabled = !isValid;  // Disable button if form is not valid
+        const isValid = 
+            forenameInput.value.trim() !== "" &&
+            surnameInput.value.trim() !== "" &&
+            emailInput.value.trim() !== "" &&
+            optionsSelect.value.trim() !== "" &&
+            detailsTextArea.value.trim() !== "" &&
+            (fileUploadInput.files.length > 0 || !fileUploadInput.required); // Ensure file upload if required
+
+        submitButton.disabled = !isValid;
     };
 
-    // Check form validity on any input change
-    form.addEventListener("input", checkFormValidity);
+    // Event listeners for form fields to check validity
+    forenameInput.addEventListener("input", checkFormValidity);
+    surnameInput.addEventListener("input", checkFormValidity);
+    emailInput.addEventListener("input", checkFormValidity);
+    optionsSelect.addEventListener("change", checkFormValidity);
+    detailsTextArea.addEventListener("input", checkFormValidity);
+    fileUploadInput.addEventListener("change", checkFormValidity);
 
-    // Initial check when the form is loaded
-    checkFormValidity();
+    // Submit form data when the user clicks the submit button
+    emailForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent the default form submission
 
-    // Handle form submission
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();  // Prevent the default form submission
+        // You can add any additional validation or pre-processing here before submitting
 
-        // Gather form data
-        const formData = new FormData(form);
+        // For example, let's log the form data (this is optional)
+        const formData = new FormData(emailForm);
+        console.log("Form Data:", formData);
 
-        // You can log the form data to check its contents
-        console.log("Form Data:", Object.fromEntries(formData.entries()));
+        // This code will submit the form to the action URL provided in the form tag.
+        // If you need more customization, you can make an AJAX request instead of direct form submission.
 
-        // Simulate form submission (you can replace this with an actual API call)
-        fetch("https://formsubmit.co/ajax", {
-            method: "POST",
-            body: formData,
+        // Proceed with form submission to the configured URL
+        fetch(emailForm.action, {
+            method: emailForm.method,
+            body: formData
         })
-        .then((response) => response.json())  // Parse JSON response
-        .then((data) => {
-            console.log("Success:", data);
-            alert("Form submitted successfully!");
-            form.reset();  // Optionally reset the form after submission
+        .then(response => {
+            if (response.ok) {
+                alert("Your message has been sent successfully!");
+                emailForm.reset(); // Reset the form after successful submission
+            } else {
+                alert("There was an error sending your message. Please try again.");
+            }
         })
-        .catch((error) => {
+        .catch(error => {
+            alert("An error occurred while submitting the form.");
             console.error("Error:", error);
-            alert("There was an issue submitting your form.");
         });
     });
+
+    // Initial check to disable the submit button if the form is incomplete
+    checkFormValidity();
 });
