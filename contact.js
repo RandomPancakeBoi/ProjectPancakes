@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Collect form data
         const formData = new FormData(form);
-        
-        fetch("https://formsubmit.co/goodwin3117@gmail.com", {
+
+        fetch("https://formsubmit.co/goodwin3117+forms@gmail.com", {
             method: "POST",
             body: formData,
         })
