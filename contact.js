@@ -14,35 +14,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial check when the form is loaded
     checkFormValidity();
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    // Handle form submission
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();  // Prevent the default form submission
 
-        // Collect form data
+        // Gather form data
         const formData = new FormData(form);
-        
-        // Log form data to check what is being submitted
-        for (let [key, value] of formData.entries()) {
-            console.log(key + ": " + value);
-        }
 
-        // Send the form data
-        fetch("https://formsubmit.co/goodwin3117+forms@gmail.com", {
+        // You can log the form data to check its contents
+        console.log("Form Data:", Object.fromEntries(formData.entries()));
+
+        // Simulate form submission (you can replace this with an actual API call)
+        fetch("https://formsubmit.co/ajax", {
             method: "POST",
             body: formData,
         })
-        .then(response => {
-            console.log('Response Status: ', response.status);
-            if (response.ok) {
-                alert("Form submitted successfully!");
-                form.reset();  // Reset form fields
-                submitButton.disabled = true;  // Disable the submit button after successful submit
-            } else {
-                alert("There was an error submitting the form.");
-            }
+        .then((response) => response.json())  // Parse JSON response
+        .then((data) => {
+            console.log("Success:", data);
+            alert("Form submitted successfully!");
+            form.reset();  // Optionally reset the form after submission
         })
         .catch((error) => {
-            console.error('Form submission error:', error);
-            alert("There was an error submitting the form.");
+            console.error("Error:", error);
+            alert("There was an issue submitting your form.");
         });
     });
 });
