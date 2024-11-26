@@ -1,14 +1,32 @@
-// Dynamically show and hide announcement banner
 document.addEventListener("DOMContentLoaded", () => {
-    const banner = document.getElementById("announcement");
+    const form = document.getElementById("emailForm");
+    const submitButton = document.getElementById("submitButton");
 
-    // Show banner
-    setTimeout(() => {
-        banner.classList.add("visible"); // Add class to make banner appear
-    }, 250); // Slight delay to ensure visibility transition starts cleanly
+    // Enable the submit button if all required fields are filled
+    form.addEventListener("input", () => {
+        const isValid = form.checkValidity();
+        submitButton.disabled = !isValid;
+    });
 
-    // Hide banner after 15 seconds
-    setTimeout(() => {
-        banner.classList.remove("visible"); // Remove class to make banner disappear
-    }, 15000);
-}); 
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Collect form data
+        const formData = new FormData(form);
+        
+        fetch("https://formsubmit.co/goodwin3117@gmail.com", {
+            method: "POST",
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Form submitted successfully!");
+                form.reset();
+                submitButton.disabled = true;
+            } else {
+                alert("There was an error submitting the form.");
+            }
+        })
+        .catch(() => alert("There was an error submitting the form."));
+    });
+});

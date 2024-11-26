@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectPancakes</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./contact.css">
 </head>
 <body>
     <!-- Announcement Banner -->
@@ -52,6 +53,53 @@
         </div>
     </main>
 
+    
+    <div class = "form-container">
+        <form id = "emailForm">
+            <div class = "form-row">
+                <div class = "input-group">
+                    <label for = "forename">Forename</label>
+                    <input type = "text" id = "forename" required>
+                </div>
+                <div class = "input-group">
+                    <label for = "surname">Surname</label>
+                    <input type = "text" id = "surname" required>
+                </div>
+            </div>
+
+            <div class = "input-group">
+                <label for = "email">Email Address</label>
+                <input type = "email" id = "email" required>
+            </div>
+
+            <div class = "input-group">
+                <label for = "options">Select An Option</label>
+                <select id = "options" required>
+                    <option value = "" disabled selected>Select An Option</option>
+                    <option value = "Option 1">1</option>
+                    <option value = "Option 2">2</option>
+                    <option value = "Option 3">3</option>
+                    <option value = "Option 4">4</option>
+                    <option value = "Option 5">5</option>
+                    <option value = "Option 6">6</option>
+                    <option value = "Other">Other</option>
+                </select>
+            </div>
+
+            <div class = "input-group">
+                <label for = "details">Description</label>
+                <textarea id = "details" rows = "4" required></textarea>
+            </div>
+
+            <div class = "input-group">
+                <label for ="fileUpload">Upload</label>
+                <input type = "file" id = "fileUpload" accept = "*">
+            </div>
+
+            <button type = "submit" id = "submitButton" disabled>Submit</button>
+        </form>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>
@@ -60,5 +108,6 @@
     </footer>
 
     <script src="./index.js"></script>
+    <script src="./contact.js"></script>
 </body>
 </html>
