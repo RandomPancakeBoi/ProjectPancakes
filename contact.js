@@ -19,12 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Collect form data
         const formData = new FormData(form);
+        
+        // Log form data to check what is being submitted
+        for (let [key, value] of formData.entries()) {
+            console.log(key + ": " + value);
+        }
 
+        // Send the form data
         fetch("https://formsubmit.co/goodwin3117+forms@gmail.com", {
             method: "POST",
             body: formData,
         })
         .then(response => {
+            console.log('Response Status: ', response.status);
             if (response.ok) {
                 alert("Form submitted successfully!");
                 form.reset();  // Reset form fields
@@ -33,6 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("There was an error submitting the form.");
             }
         })
-        .catch(() => alert("There was an error submitting the form."));
+        .catch((error) => {
+            console.error('Form submission error:', error);
+            alert("There was an error submitting the form.");
+        });
     });
 });
