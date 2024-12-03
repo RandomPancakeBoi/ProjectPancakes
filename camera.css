@@ -1,0 +1,83 @@
+/* Global Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+}
+
+.slot {
+    position: relative;
+    flex: 1 1 calc(25% - 20px); /* Ensures Four Slots on larger screens */
+    max-width: calc(25% - 20px); /* Ensures Four Slots on larger screens */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Adds space at the bottom for each image */
+}
+
+h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.image-slot {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1; /* Ensures square aspect */
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+/* Placeholder Style */
+.placeholder {
+    background: rgba(200, 200, 200, 0.3);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 10px; /* Moves Dotted Border Inside Placeholder */
+    border: 2px dashed rgba(100, 100, 100, 0.5);
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.placeholder::after {
+    content: "+";
+    position: absolute;
+    font-size: 24px;
+    color: rgba(100, 100, 100, 0.8);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .slot {
+        flex: 1 1 50%; /* Force 2x2 Grid */
+        max-width: 50%; /* Ensure two items per row */
+    }
+}
