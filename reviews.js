@@ -1,5 +1,5 @@
 // Initalise
-const swiper = new Swiper('.swiper', {
+const swuper = new Swiper('.swiper', {
     loop: true,
 
     // For Pages
