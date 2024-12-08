@@ -8,9 +8,7 @@
 </head>
 <body>
     <!-- Announcement Banner -->
-    <div class="announcement-banner" id="announcement">
-        <strong>Important : </strong>This Is Website Is A Work In Progress. Some Features May Not Work As Intended Initially.
-    </div>
+    <div class="announcement-banner" id="announcement">This Is Website Is A Work In Progress. Some Features May Not Work As Intended Initially.</div>
     
     <!-- Header -->
     <header>
@@ -30,6 +28,18 @@
                 <a href="./contact.html" class="dropdown-item">Contact Us</a><br/>
             </div>
         </div>
+
+        <div class = "lang-select">
+            <select id = "lang-select">
+                <option value = "en-uk" selected>🇬🇧 English - British</option>
+                <option value = "en-us">🇺🇸 English - American</option>
+                <option value = "fr">🇫🇷 Français</option>
+                <option value = "es">🇪🇸 Español</option>
+                <option value = "de">🇩🇪 Deutsch</option>
+                <option value = "pt">🇵🇹 Português</option>
+                <option value = "zh">🇨🇳 普通话 中文</option>
+            </select>
+        </div>
     </header>
 
 
@@ -37,9 +47,7 @@
     <main>
         <div class="central-container">
             <img src="./pfp.png" alt="Central Image" class="central-image">
-            <p class="central-text">
-                At ProjectPancakes, We Provide All-in-One Tech Care, From Repairs To Custom Builds.
-            </p>
+            <p class="central-text">At ProjectPancakes, We Provide All-in-One Tech Care, From Repairs To Custom Builds.</p>
         </div>
 
         <!-- Social Media Section -->
@@ -58,10 +66,27 @@
 
     <!-- Footer -->
     <footer>
-        <p>
-            All Media On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes
-        </p>
+        <p>All Media On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes</p>
     </footer>
+
+
+    <!-- Styling For Socials And Footer -->
+    <style>
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: transparent; /* Fully transparent */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 11px;
+        }
+        .social-media {
+            text-align: center;
+            margin: 75px 0;
+        }
+    </style>
 
     <script src="./index.js"></script>
 </body>

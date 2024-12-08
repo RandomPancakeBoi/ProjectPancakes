@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
     overflow-x: hidden;
 }
 
@@ -186,11 +189,6 @@ header {
 }
 
 /* Social Media Section */
-.social-media {
-    text-align: center;
-    margin: 75px 0;
-}
-
 .social-icon {
     margin: 0 10px;
     padding-right: 0px;
@@ -210,15 +208,33 @@ header {
     background: rgba(255, 255, 255, 0.4);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: transparent; /* Fully transparent */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 11px;
+
+/* Language Selector Styling */
+.lang-select {
+    position: relative;
+    left: 1690px;
+}
+
+#lang-select {
+    font-size: 12px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 1);
+}
+
+option {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+option:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Design */
