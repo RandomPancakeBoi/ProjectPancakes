@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectPancakes</title>
+    <link rel="stylesheet" href="./shared.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
@@ -13,11 +14,11 @@
     <!-- Header -->
     <header>
         <div class="menu">
-            <div class = "Wrapper">
-                <a class = "nav">
-                    <div class = "One"></div>
-                    <div class = "Two"></div>
-                    <div class = "Three"></div>     
+            <div class="Wrapper">
+                <a class="nav">
+                    <div class="One"></div>
+                    <div class="Two"></div>
+                    <div class="Three"></div>     
                 </a>
             </div>
             <!-- Dropdown Menu -->
@@ -29,19 +30,13 @@
             </div>
         </div>
 
-        <div class = "lang-select">
-            <select id = "lang-select">
-                <option value = "en-uk" selected>🇬🇧 English - British</option>
-                <option value = "en-us">🇺🇸 English - American</option>
-                <option value = "fr">🇫🇷 Français</option>
-                <option value = "es">🇪🇸 Español</option>
-                <option value = "de">🇩🇪 Deutsch</option>
-                <option value = "pt">🇵🇹 Português</option>
-                <option value = "zh">🇨🇳 普通话 中文</option>
-            </select>
-        </div>
-    </header>
+        <!-- Mode Switch Slider -->
+        <label class="switch">
+            <input type="checkbox" id="modeSwitch" checked />
+            <span class="slider"></span>
+        </label>
 
+    </header>
 
     <!-- Main Content -->
     <main>
@@ -66,28 +61,10 @@
 
     <!-- Footer -->
     <footer>
-        <p>All Media On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes</p>
+        <p>All Media Displayed On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes</p>
     </footer>
 
-
-    <!-- Styling For Socials And Footer -->
-    <style>
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: transparent; /* Fully transparent */
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 11px;
-        }
-        .social-media {
-            text-align: center;
-            margin: 75px 0;
-        }
-    </style>
-
     <script src="./index.js"></script>
+    <script src="./shared.js"></script>
 </body>
 </html>
