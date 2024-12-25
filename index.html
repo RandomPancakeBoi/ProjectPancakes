@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ProjectPancakes</title>
+
+    <link rel="stylesheet" href="./shared.css">
     <link rel="stylesheet" href="./index.css">
+
+    <script src="./shared.js"></script>
+    <script src="./index.js"></script>
+    <script src="./redirect.js"></script>
+    
 </head>
 <body>
     <!-- Announcement Banner -->
-    <div class="announcement-banner" id="announcement">
-        <strong>Important : </strong>This Is Website Is A Work In Progress. Some Features May Not Work As Intended Initially.
-    </div>
+    <div class="announcement-banner" id="announcement">This Is Website Is A Work In Progress. Some Features May Not Work As Intended Initially.</div>
     
     <!-- Header -->
     <header>
         <div class="menu">
-            <div class = "Wrapper">
-                <a class = "nav">
-                    <div class = "One"></div>
-                    <div class = "Two"></div>
-                    <div class = "Three"></div>     
+            <div class="Wrapper">
+                <a class="nav">
+                    <div class="One"></div>
+                    <div class="Two"></div>
+                    <div class="Three"></div>     
                 </a>
             </div>
             <!-- Dropdown Menu -->
@@ -30,16 +36,20 @@
                 <a href="./contact.html" class="dropdown-item">Contact Us</a><br/>
             </div>
         </div>
-    </header>
 
+        <!-- Mode Switch Slider -->
+        <label class="switch">
+            <input type="checkbox" id="modeSwitch" checked />
+            <span class="slider"></span>
+        </label>
+
+    </header>
 
     <!-- Main Content -->
     <main>
         <div class="central-container">
             <img src="./pfp.png" alt="Central Image" class="central-image">
-            <p class="central-text">
-                At ProjectPancakes, We Provide All-in-One Tech Care, From Repairs To Custom Builds.
-            </p>
+            <p class="central-text">At ProjectPancakes, We Provide All-in-One Tech Care, From Repairs To Custom Builds.</p>
         </div>
 
         <!-- Social Media Section -->
@@ -58,11 +68,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>
-            All Media On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes
-        </p>
+        <p>All Media Displayed On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes</p>
     </footer>
-
-    <script src="./index.js"></script>
 </body>
 </html>
