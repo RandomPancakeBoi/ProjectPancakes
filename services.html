@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectPancakes</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel = "stylesheet" href = "../shared.css">
+    <link rel="stylesheet" href="./services.css">
 </head>
 <body>
     <!-- Announcement Banner -->
-    <div class="announcement-banner" id="announcement">
-        <strong>Important : </strong>This Is Website Is A Work In Progress. Some Features May Not Work As Intended Initially.
-    </div>
+    <div class="announcement-banner" id="announcement">This Is Website Is A Work In Progress. Some Features May Not Work As Intended Initially.</div>
     
     <!-- Header -->
     <header>
@@ -27,14 +26,22 @@
                 <a href="./index.html" class="dropdown-item">Home Page</a><br/>
                 <a href="./camera.html" class="dropdown-item">Camera Roll</a><br/>
                 <a href="./reviews.html" class="dropdown-item">Our Reviews</a><br/>
-                <a href="./contact.htrml" class="dropdown-item">Contact Us</a><br/>
+                <a href="./contact.html" class="dropdown-item">Contact Us</a><br/>
             </div>
+
+            <!-- Mode Switch Slider -->
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch" />
+                <span class="slider"></span>
+            </label>
         </div>
     </header>
 
 
-    <!-- Main Content -->
-    <main>
+    <!-- Footer -->
+    <footer>
+        <p class = "main-footer">All Media Displayed On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes</p>
+
         <!-- Social Media Section -->
         <div class="social-media">
             <a href="https://facebook.com" target="_blank" class="social-icon">
@@ -46,19 +53,11 @@
             <a href="<FILENAMEHERE>" target="_blank" class="social-icon">
                 <img src="https://img.icons8.com/?size=48&id=JhnudqGq5SE3&format=png" alt="CU">
             </a><br/>
-            <p>
-                Services.html
-            </p>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>
-            All Media On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes
-        </p>
     </footer>
-
-    <script src="./index.js"></script>
 </body>
+
+<script src="../shared.js"></script>
+<script src="./services.js"></script>
+
 </html>
