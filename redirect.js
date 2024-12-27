@@ -1,17 +1,14 @@
-// Directing Mobile Or Desktop
-function redirectBasedOnDevice() {
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-        // Redirect To Mobile Version
-        window.location.replace("./mobile-index.html");
-        console.log("User Is On Mobile")
-    }
+// redirect.js
+window.addEventListener('load', () => {
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
 
-    else {
-        // Redirect To Desktop Version
-        console.log("User Is On Desktop");
-    }
-}
+  // Get the current URL path
+  const currentPath = window.location.pathname;
 
-// Call Function
-redirectBasedOnDevice();
+  // Prevent redirection if already on the correct version
+  if (isMobile && !currentPath.includes("Mobile")) {
+    window.location.replace("/Mobile/mobile-index.html");
+  } else if (!isMobile && !currentPath.includes("Desktop")) {
+    window.location.replace("/Desktop/index.html");
+  }
+});
