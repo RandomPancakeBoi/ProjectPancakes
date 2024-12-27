@@ -7,8 +7,8 @@ window.addEventListener('load', () => {
 
   // Prevent redirection if already on the correct version
   if (isMobile && !currentPath.includes("Mobile")) {
-    window.location.replace("/Mobile/mobile-index.html");
+    window.location.replace("./Mobile/mobile-index.html");
   } else if (!isMobile && !currentPath.includes("Desktop")) {
-    window.location.replace("/Desktop/index.html");
+    window.location.replace("./Desktop/index.html");
   }
 });
