@@ -1,14 +1,17 @@
-// redirect.js
-window.addEventListener('load', () => {
-  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+// Redirect users to the appropriate version of the site based on device type.
+(function() {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const currentPath = window.location.pathname;
 
-  // Get the current URL path
-  const currentPath = window.location.pathname;
+    // Define paths for mobile and desktop
+    const mobilePath = '/mobile-index.html';
+    const desktopPath = '/index.html';
 
-  // Prevent redirection if already on the correct version
-  if (isMobile && !currentPath.includes("Mobile")) {
-    window.location.replace("./Mobile/mobile-index.html");
-  } else if (!isMobile && !currentPath.includes("Desktop")) {
-    window.location.replace("./Desktop/index.html");
-  }
-});
+    if (isMobile && !currentPath.includes('mobile-index.html')) {
+        // Redirect to mobile version if the user is on a mobile device
+        window.location.replace(mobilePath);
+    } else if (!isMobile && !currentPath.includes('index.html')) {
+        // Redirect to desktop version if the user is on a desktop
+        window.location.replace(desktopPath);
+    }
+})();
