@@ -4,8 +4,8 @@
   const currentPath = window.location.pathname;
 
   // Define paths for mobile and desktop
-  const mobilePath = '/mobile-index.html';
-  const desktopPath = '/index.html';
+  const mobilePath = './mobile-index.html';
+  const desktopPath = './index.html';
 
   if (isMobile && !currentPath.includes('mobile-index.html')) {
       // Redirect to mobile version if the user is on a mobile device
