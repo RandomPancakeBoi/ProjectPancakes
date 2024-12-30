@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 650px auto;
     grid-template-rows: 1fr;
-    grid-column-gap: 20px;
+    grid-column-gap: 30px;
     grid-row-gap: 20px;
     justify-content: stretch;
     align-items: center;
@@ -26,7 +26,8 @@
     margin-right: 10px;
     padding-left: 50px;
     padding-right: 50px;
-    font-size: 18px;
+    padding-top: 25px;
+    font-size: 20px;
     text-align: center;
 }
 

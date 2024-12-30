@@ -164,7 +164,7 @@ header {
     left: 0.3em;
     bottom: 0.3em;
     background-color: black;
-    box-shadow: inset 8px -4px 0 0 white;
+    box-shadow: inset 8px -4px 0 0 antiquewhite;
     transition: 0.4s;
 }
 
@@ -239,7 +239,7 @@ body {
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
-    color: antiquewhite;
+    color: lightgrey;
 }
 
 
