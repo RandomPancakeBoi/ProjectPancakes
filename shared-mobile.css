@@ -200,12 +200,12 @@ body.dark-mode {
 /* Footer */
 footer {
     text-align: center;
+    font-size: 9px;
     padding: 20px;
     background: transparent; /* Fully transparent */
     position: fixed;
     bottom: 0;
     width: 100%;
-    font-size: 11px;
 }
 
 .footer-text {
