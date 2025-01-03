@@ -1,0 +1,18 @@
+.central-image {
+    max-width: 650px; /* Limit the width to 250px */
+    width: 100%; /* Allow the image to scale down */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0;
+}
+
+.central-text {
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 10px;
+    text-align: center;
+}

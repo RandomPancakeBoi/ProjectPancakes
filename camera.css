@@ -7,19 +7,16 @@ body {
 }
 
 .image-container {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: stretch;
+    align-items: center;
 }
 
 .slot {
-    position: relative;
-    flex: 1 1 calc(25% - 20px); /* Ensures Four Slots on larger screens */
-    max-width: calc(25% - 20px); /* Ensures Four Slots on larger screens */
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px; /* Adds space at the bottom for each image */
+    margin: 10px;
 }
 
 h3 {
@@ -40,9 +37,29 @@ h3 {
     transition: transform 0.3s ease;
 }
 
+.image-slot .title-card {
+    position: absolute;
+    top: 0; /* Align the title card to the top */
+    left: 50%; /* Center the title card horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    background-color: rgba(200, 200, 200, 0.3); /* Dark background with transparency */
+    color: lightslategray;
+    padding: 10px;
+    border-radius: 10px; /* Round all corners */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Avoid interfering with hover */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    margin-top: 5px;
+}
+
+.image-slot:hover .title-card {
+    opacity: 1; /* Show the title card on hover */
+}
+
 /* Placeholder Style */
 .placeholder {
-    background: rgba(200, 200, 200, 0.3);
+    background: rgba(200, 200, 200, 0.3); /* Light gray background */
     border-radius: 10px;
     position: relative;
     display: flex;
@@ -75,10 +92,27 @@ h3 {
     pointer-events: none;
 }
 
-/* Responsive Styling */
-@media screen and (max-width: 768px) {
-    .slot {
-        flex: 1 1 50%; /* Force 2x2 Grid */
-        max-width: 50%; /* Ensure two items per row */
-    }
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    background: transparent; /* Fully transparent */
+    position: fixed;
+    bottom: 0;
+    font-size: 11px;
+    width: 100%;
+}
+
+/* Social Media Section */
+.social-media {
+    scale: 75%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectPancakes</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel = "stylesheet" href = "./shared.css">
     <link rel="stylesheet" href="./camera.css">
 </head>
 <body>
     <!-- Announcement Banner -->
-    <div class="announcement-banner" id="announcement">
-        <strong>Important : </strong>This Website Is A Work In Progress. Some Features May Not Work As Intended Initially.
-    </div>
+    <div class="announcement-banner" id="announcement">This Is Website Is A Work In Progress. Some Features May Not Work As Intended Initially.</div>
+    
     
     <!-- Header -->
     <header>
@@ -30,103 +29,112 @@
                 <a href="./reviews.html" class="dropdown-item">Our Reviews</a><br/>
                 <a href="./contact.html" class="dropdown-item">Contact Us</a><br/>
             </div>
+
+            <!-- Mode Switch Slider -->
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch" />
+                <span class="slider"></span>
+            </label>
+
         </div>
     </header>
-    
-    <!-- Content Container -->
-    <div class="image-container">
-        <!-- Slot 1 -->
-        <div class="slot" data-hover="false">
-            <h3>Input Slot 1</h3>
-            <div class="image-slot placeholder">
-                <!-- Placeholder-->
-            </div>
-        </div>
-
-        <!-- Slot 2 -->
-        <div class="slot" data-hover="false">
-            <h3>Input Slot 2</h3>
-            <div class="image-slot placeholder">
-                <!-- Placeholder-->
-            </div>
-        </div>
-
-        <!-- Slot 3 -->
-        <div class="slot" data-hover="false">
-            <h3>Input Slot 3</h3>
-            <div class="image-slot placeholder">
-                <!-- Placeholder-->
-            </div>
-        </div>
-
-        <!-- Slot 4 -->
-        <div class="slot" data-hover="false">
-            <h3>Input Slot 4</h3>
-            <div class="image-slot placeholder">
-                <!-- Placeholder-->
-            </div>
-        </div>
-    </div>
-
-    <!-- Flipped -->
-    <div class="image-container flipped">
-        <!-- Slot 1 -->
-        <div class="slot" data-hover="false">
-            <div class="image-slot placeholder">
-                <!-- Placeholder-->
-            </div>
-            <h3>Flipped Input Slot 1</h3>
-        </div>
-
-        <!-- Slot 2 -->
-        <div class="slot" data-hover="false">
-            <div class="image-slot placeholder">
-                <!-- Placeholder-->
-            </div>
-            <h3>Flipped Input Slot 2</h3>
-        </div>
-
-        <!-- Slot 3 -->
-        <div class="slot" data-hover="false">
-            <div class="image-slot placeholder">
-                <!-- Placeholder-->
-            </div>
-            <h3>Flipped Input Slot 3</h3>
-        </div>
-
-        <!-- Slot 4 -->
-        <div class="slot" data-hover="false">
-            <div class="image-slot placeholder">
-                <!-- Placeholder-->
-            </div>
-            <h3>Flipped Input Slot 4</h3>
-        </div>
-    </div>
-
     <!-- Main Content -->
     <main>
-        <!-- Social Media Section -->
-        <div class="social-media">
-            <a href="https://facebook.com" target="_blank" class="social-icon">
-                <img src="https://img.icons8.com/?size=48&id=b2h5ow1Hfzpc&format=png" alt="FB">
-            </a>
-            <a href="https://api.whatsapp.com/send/?phone=%2B4407443639793&text&type=phone_number&app_absent=0" target="_blank" class="social-icon">
-                <img src="https://img.icons8.com/?size=48&id=ypXY3Rt1RZ6q&format=png" alt="WA">
-            </a>
-            <a href="<FILENAMEHERE>" target="_blank" class="social-icon">
-                <img src="https://img.icons8.com/?size=48&id=JhnudqGq5SE3&format=png" alt="CU">
-            </a><br/>
+        <!-- Content Container -->
+        <div class="image-container">
+            <!-- Slot 1 -->
+            <div class="slot" data-hover="false">
+                <div class="image-slot placeholder">
+                    <!-- Placeholder-->
+                    <div class = "title-card">Title For Slot 1</div>
+                </div>
+            </div>
+
+            <!-- Slot 2 -->
+            <div class="slot" data-hover="false">
+                <div class="image-slot placeholder">
+                    <!-- Placeholder-->
+                    <div class = "title-card">Title For Slot 2</div>
+                </div>
+            </div>
+
+            <!-- Slot 3 -->
+            <div class="slot" data-hover="false">
+                <div class="image-slot placeholder">
+                    <!-- Placeholder-->
+                    <div class = "title-card">Title For Slot 3</div>
+                </div>
+            </div>
+
+            <!-- Slot 4 -->
+            <div class="slot" data-hover="false">
+                <div class="image-slot placeholder">
+                    <!-- Placeholder-->
+                    <div class = "title-card">Title For Slot 4</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flipped -->
+        <div class="image-container flipped">
+            <!-- Slot 1 -->
+            <div class="slot" data-hover="false">
+                <div class="image-slot placeholder">
+                    <!-- Placeholder-->
+                    <div class = "title-card">Title For Slot 1</div>
+                </div>
+            </div>
+
+            <!-- Slot 2 -->
+            <div class="slot" data-hover="false">
+                <div class="image-slot placeholder">
+                    <!-- Placeholder-->
+                    <div class = "title-card">Title For Slot 2</div>
+                </div>
+            </div>
+
+            <!-- Slot 3 -->
+            <div class="slot" data-hover="false">
+                <div class="image-slot placeholder">
+                    <!-- Placeholder-->
+                    <div class = "title-card">Title For Slot 3</div>
+                </div>
+            </div>
+
+            <!-- Slot 4 -->
+            <div class="slot" data-hover="false">
+                <div class="image-slot placeholder">
+                    <div class = "title-card">Title For Slot 4</div>
+                    <!-- Placeholder-->
+                </div>
+            </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>
-            All Media On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes
-        </p>
-    </footer>
+        <p class = "main-footer">All Media Displayed On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes</p>
 
-    <script src="./index.js"></script>
-    <script src="./camera.js"></script>
+        <!-- Social Media Section -->
+        <!-- Social Media Section -->
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+                <img class = "dark-mode-icon" src="https://img.icons8.com/?size=48&id=b2h5ow1Hfzpc&format=png&color=000000" alt="FB">
+                <img class = "light-mode-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADyUlEQVR4nO1ZTYhNYRg+NEiK/C5QdlY2/m3tzVAGZYOSBQtRQlYWgwUWzNLvBvMjslRK+SkshCibwQ1j7v2e55y5EzMjfHrzXb1zunfOd87cH+o+9TV157w/z/m+7/07QdBEE01MGNbaycaYdQAOkuwl+ZLkR5LfAIwCoPuth+QRY8xakQkaDZJLABwn+YGkTblyAE4UCoWFdXc8iqLZJM/I283g+JgFYARAZxRFc+rl/CoApowzXwBcArA7DMPlxphFuVxuurV2arFYnCdyJHcAuAxgoAyRAoCtNSdA8mzM8P0wDDdZa6f46rDWtpBsI/mgDJFO+X/NCLg32U/yjTg+UX0kWwH0xUjckd0L/hcYY2aSvBEnUdOdqDastZMAdMRInA/+NyBGwhjT3ugE1w7gFslPLqn9lMTmktu1MjKTSHapXchL2E5tnOR+km/lbxbnSc4ieTcpDwQV7gSA94rEuVTGjTGLAXx3CoayEABw2yeRBRXgwmzpueFUGZvkScX+XlrnwzBc75uJg/H9eKT86PAy7s7gZ2WkNS0BycieZcRoAgG9Cx+8CsBCobBalwdZqkZJcpXqHpIXSJ5yq208PZLd5RKX5MU3H+PHlNGLaZ13OqJyBIwxm9PqAnBFvYDDPsa7ldEdWQgA+FWOgBR2aXWFYbhL6ej2IfC6JBCG4YosBLJc2EowxqxROl4GSdBnrlgszg8aTGBoaGiBLrl9CIyoLZ/WaALW2mk6CPgQGE1zZkk+9Y35ZdbjJP1SVqvnv/kQ+NttSSflQcBOYA0m6ZfOTj3/KZEAyVclAWleakkAwPMk/VEUrVQyr3wI9KootLPGBG4m6QewR8lc9yFwVBm45PH8k4wEhgFs89B/UflzKJGADJ2UwECWtq5aUcj+KSUKJXkZnvkITZahkzLc1igCJDeol/leCk0vQZmYKcMPG0jgoZI/5S0ooUsntLQldTUIhGN7imHxKY287EKn2r4+afPqScAYcyBzSymQWaW+QDK38T2D1SAQRdEcN83uGRwcnBtkgcwqY3G7o553oCrQR6lEImkn/ikC1toWGfPFnOka706kJdDf3z+D5PZ8Pr+0JiSkIoyTAPCuUo5IQwDAFpV3ijX7TuB2YsxxcktGHxv1eD2JgKvxt0s5HXspP2QmFdQSblRY7gNFHsDVWA8bX3slmsWim3Xrs+xGUA/IrFJicyzZZVr4o+N0mjxTNci4z02Tcxkc75MxSda+u6qQAlCGTuKQjD4AvJDOzrWnX2WqBuCZ+4ixD8Ay78KsiSaaCMbDb+6gh9OzCNm1AAAAAElFTkSuQmCC" alt="FB">
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B4407443639793&text&type=phone_number&app_absent=0" target="_blank" class="social-icon">
+                <img class = "dark-mode-icon" src="https://img.icons8.com/?size=48&id=ypXY3Rt1RZ6q&format=png" alt="WA">
+                <img class = "light-mode-icon" src="https://img.icons8.com/?size=48&id=5dwUMJ8TQaqa&format=png&color=ffffff" alt="WA">
+            </a>
+            <a href="https://twitch.tv/randompancakeboi" target="_blank" class="social-icon">
+                <img class = "dark-mode-icon" src="https://img.icons8.com/?size=48&id=F0VhNaQGnmzq&format=png" alt="TTV">
+                <img class = "light-mode-icon" src="https://img.icons8.com/?size=48&id=3zoWozbeXuVE&format=png&color=ffffff" alt="TTV">
+            </a>
+        </div>
+    </footer>
 </body>
+
+<script src="./shared.js"></script>
+<script src="./camera.js"></script>
+
 </html>
