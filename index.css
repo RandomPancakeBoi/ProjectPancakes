@@ -1,23 +1,34 @@
-/* Main Content */
+/* Central Container Section */
 .central-container {
     display: grid;
     grid-template-columns: 650px auto;
-    grid-template-rows: 1fr;
-    grid-column-gap: 30px;
-    grid-row-gap: 20px;
+    grid-column-gap: 0px;
     justify-content: stretch;
     align-items: center;
     position: relative;
-    top: 100px;
+    top: 55px;
 }
 
 .central-image {
-    max-width: 650px; /* Limit the width to 250px */
-    width: 100%; /* Allow the image to scale down */
+    max-width: 650px;
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     margin-top: 0;
+}
+
+.about-me-container h2 {
+    text-align: center;
+    padding-left: 55px;
+    font-size: 25px;
+}
+
+.me-icon {
+    scale: 75%;
+    position: relative;
+    left: 150px;
+    top: 45px;
 }
 
 .central-text {
@@ -26,16 +37,60 @@
     margin-right: 10px;
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 25px;
     font-size: 20px;
     text-align: center;
+    position: relative;
+}
+
+
+/* Services Tabs Section */
+.service-tabs {
+    /* Grid Set */
+    display: grid;
+    grid-template-columns: auto 15% 15% 15% 15% 15% auto;
+    grid-column-gap: 35px;
+    grid-row-gap: 0px;
+    justify-items: stretch;
+    align-items: center;
+
+    /* Position Set */
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+
+    /* Other */
+    text-align: center;
+}
+
+.card {
+    background-color: rgba(250, 235, 215, 0.13);
+    border-radius: 15px;
+    height: 250px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.card:hover {
+    transform: scale(1.1, 1.1)
+}
+
+.card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.card p.service-tab-text {
+    font-size: .7em;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background: transparent; /* Fully transparent */
+    background: transparent;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -43,8 +98,22 @@ footer {
 }
 
 /* Social */
-.social-media {
-    text-align: center;
-    margin: 375px 0;
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    width: auto;
 }
 
+.social-card {
+    display: block;
+    text-align: center;
+}
+
+.social-card .social-icon {
+    display: block;
+    margin: 10px 0;
+    scale: 85%;
+}
