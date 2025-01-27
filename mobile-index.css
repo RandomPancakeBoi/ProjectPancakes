@@ -1,0 +1,40 @@
+/* Central Container Section */
+.central-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 50%;
+    grid-row-gap: 0px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.central-image {
+    max-width: 500px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+.about-me-container h2 {
+    text-align: center;
+    padding-left: 55px;
+    font-size: 18px;
+}
+
+.me-icon {
+    scale: 55%;
+    position: relative;
+    left: -45px;
+    top: 40px;
+}
+
+.central-text {
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+}

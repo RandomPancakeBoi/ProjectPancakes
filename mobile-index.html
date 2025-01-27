@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ProjectPancakes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./shared-mobile.css">
+    <link rel="stylesheet" href="./mobile-index.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Mode Switch Slider -->
+        <label class="switch">
+            <input type="checkbox" id="modeSwitch" checked />
+            <span class="slider"></span>
+        </label>
+
+
+    </header>
+  
+    
+    <!-- Main Content -->
+    <main>
+        <div class="central-container">
+            <img src="./pfp.png" alt="Central Image" class="central-image">
+            <div class = "about-me-container">
+                <div class = "hey-title">
+                    <div class = "me-icon">
+                        <img class = "dark-mode-icon" src="https://img.icons8.com/pulsar-color/48/smiling.png" alt="ME">
+                        <img class = "light-mode-icon" src="data:image/png;base64,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" alt="ME">
+                    </div>
+                    <h2>Hey, I’m Oliver, the person behind ProjectPancakes.</h2>
+                </div>
+                <p class="central-text">
+                    My goal is simple: to make tech repairs, upgrades, and advice accessible to everyone. 
+                    Whether you need a device fixed, a custom PC built, or just some help with another tech issue, I’m here for you. <br/><br/>
+                    I’ve been passionate about technology for as long as I can remember. 
+                    Growing up, I was the kid who took apart gadgets just to see how they worked; and that curiosity has stuck with me over the years. 
+                    That’s what led me to start ProjectPancakes in 2018. Since then, I’ve been offering personal, reliable services from the comfort of my home; and, when needed, in others’ homes too. <br/><br/>
+                    What makes ProjectPancakes different is how I treat my customers. 
+                    Whether you’re a first-time customer or a returning one, I’m always happy to chat, answer questions, and make sure you feel confident about your tech. <br/><br/>
+                    I’m here to make the process easy, clear, and stress-free for you.If you need help with tech or just want to talk things through, don’t hesitate to reach out. 
+                    I’m here to make sure you get the best service, no matter what.
+                    </p>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class = "footer-text">All Media Displayed On This Site Is The Exclusive Property Of ProjectPancakes And Was Captured By ProjectPancakes</p>
+
+        <div class="button-container">
+                <a href = "./mobile-index.html" class = "home">
+                    <button class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ccc" class = "light-mode-icon icon">
+                            <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 11 21 L 11 15 L 13 15 L 13 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z M 12 4.7910156 L 18 10.191406 L 18 11 L 18 19 L 15 19 L 15 13 L 9 13 L 9 19 L 6 19 L 6 10.191406 L 12 4.7910156 z">
+                        </path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#111" class = "dark-mode-icon icon">
+                            <path d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 11 21 L 11 15 L 13 15 L 13 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z M 12 4.7910156 L 18 10.191406 L 18 11 L 18 19 L 15 19 L 15 13 L 9 13 L 9 19 L 6 19 L 6 10.191406 L 12 4.7910156 z">
+                        </path></svg>
+                    </button>
+                    <p class = "buttonText">Home</p>
+                </a>
+    
+                <a href = "./mobile-camera.html" class = "photos">
+                    <button class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0,0,256,256" class = "light-mode-icon icon">
+                            <g fill="#ccc" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                            <g transform="scale(5.33333,5.33333)">
+                            <path d="M12.5,5c-4.1245,0 -7.5,3.3755 -7.5,7.5v18c0,4.1245 3.3755,7.5 7.5,7.5h18c4.1245,0 7.5,-3.3755 7.5,-7.5v-18c0,-4.1245 -3.3755,-7.5 -7.5,-7.5zM12.5,8h18c2.5035,0 4.5,1.9965 4.5,4.5v18c0,0.6971 -0.16788,1.34727 -0.44531,1.93359l-10.28125,-10.2793c-0.75984,-0.75984 -1.76628,-1.14062 -2.77344,-1.14062c-1.00716,0 -2.01555,0.38078 -2.77539,1.14063l-10.2793,10.2793c-0.27744,-0.58632 -0.44531,-1.2365 -0.44531,-1.93359v-18c0,-2.5035 1.9965,-4.5 4.5,-4.5zM40,11.51367v19.98633c0,4.687 -3.813,8.5 -8.5,8.5h-19.98633c1.37,1.818 3.53933,3 5.98633,3h14c6.341,0 11.5,-5.159 11.5,-11.5v-14c0,-2.446 -1.182,-4.61633 -3,-5.98633zM27.5,13c-1.38071,0 -2.5,1.11929 -2.5,2.5c0,1.38071 1.11929,2.5 2.5,2.5c1.38071,0 2.5,-1.11929 2.5,-2.5c0,-1.38071 -1.11929,-2.5 -2.5,-2.5zM21.5,23.99609c0.23358,0 0.46618,0.09314 0.65234,0.2793l10.28125,10.2793c-0.58632,0.27744 -1.2365,0.44531 -1.93359,0.44531h-18c-0.6971,0 -1.34727,-0.16788 -1.93359,-0.44531l10.2793,-10.2793c0.18616,-0.18616 0.42072,-0.2793 0.6543,-0.2793z">
+                            </path></g></g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0,0,256,256" class = "dark-mode-icon icon">
+                            <g fill="#111" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                            <g transform="scale(5.33333,5.33333)">
+                            <path d="M12.5,5c-4.1245,0 -7.5,3.3755 -7.5,7.5v18c0,4.1245 3.3755,7.5 7.5,7.5h18c4.1245,0 7.5,-3.3755 7.5,-7.5v-18c0,-4.1245 -3.3755,-7.5 -7.5,-7.5zM12.5,8h18c2.5035,0 4.5,1.9965 4.5,4.5v18c0,0.6971 -0.16788,1.34727 -0.44531,1.93359l-10.28125,-10.2793c-0.75984,-0.75984 -1.76628,-1.14062 -2.77344,-1.14062c-1.00716,0 -2.01555,0.38078 -2.77539,1.14063l-10.2793,10.2793c-0.27744,-0.58632 -0.44531,-1.2365 -0.44531,-1.93359v-18c0,-2.5035 1.9965,-4.5 4.5,-4.5zM40,11.51367v19.98633c0,4.687 -3.813,8.5 -8.5,8.5h-19.98633c1.37,1.818 3.53933,3 5.98633,3h14c6.341,0 11.5,-5.159 11.5,-11.5v-14c0,-2.446 -1.182,-4.61633 -3,-5.98633zM27.5,13c-1.38071,0 -2.5,1.11929 -2.5,2.5c0,1.38071 1.11929,2.5 2.5,2.5c1.38071,0 2.5,-1.11929 2.5,-2.5c0,-1.38071 -1.11929,-2.5 -2.5,-2.5zM21.5,23.99609c0.23358,0 0.46618,0.09314 0.65234,0.2793l10.28125,10.2793c-0.58632,0.27744 -1.2365,0.44531 -1.93359,0.44531h-18c-0.6971,0 -1.34727,-0.16788 -1.93359,-0.44531l10.2793,-10.2793c0.18616,-0.18616 0.42072,-0.2793 0.6543,-0.2793z">
+                            </path></g></g>
+                        </svg>
+                    </button>
+                    <p class = "buttonText">Photos</p>
+                </a>
+    
+                <a href = "./mobile-services.html" class = "shop">
+                    <button class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ccc" class = "light-mode-icon icon">
+                            <path d="M4.00488 16V4H2.00488V2H5.00488C5.55717 2 6.00488 2.44772 6.00488 3V15H18.4433L20.4433 7H8.00488V5H21.7241C22.2764 5 22.7241 5.44772 22.7241 6C22.7241 6.08176 22.7141 6.16322 22.6942 6.24254L20.1942 16.2425C20.083 16.6877 19.683 17 19.2241 17H5.00488C4.4526 17 4.00488 16.5523 4.00488 16ZM6.00488 23C4.90031 23 4.00488 22.1046 4.00488 21C4.00488 19.8954 4.90031 19 6.00488 19C7.10945 19 8.00488 19.8954 8.00488 21C8.00488 22.1046 7.10945 23 6.00488 23ZM18.0049 23C16.9003 23 16.0049 22.1046 16.0049 21C16.0049 19.8954 16.9003 19 18.0049 19C19.1095 19 20.0049 19.8954 20.0049 21C20.0049 22.1046 19.1095 23 18.0049 23Z">
+                        </path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#111" class = "dark-mode-icon icon">
+                            <path d="M4.00488 16V4H2.00488V2H5.00488C5.55717 2 6.00488 2.44772 6.00488 3V15H18.4433L20.4433 7H8.00488V5H21.7241C22.2764 5 22.7241 5.44772 22.7241 6C22.7241 6.08176 22.7141 6.16322 22.6942 6.24254L20.1942 16.2425C20.083 16.6877 19.683 17 19.2241 17H5.00488C4.4526 17 4.00488 16.5523 4.00488 16ZM6.00488 23C4.90031 23 4.00488 22.1046 4.00488 21C4.00488 19.8954 4.90031 19 6.00488 19C7.10945 19 8.00488 19.8954 8.00488 21C8.00488 22.1046 7.10945 23 6.00488 23ZM18.0049 23C16.9003 23 16.0049 22.1046 16.0049 21C16.0049 19.8954 16.9003 19 18.0049 19C19.1095 19 20.0049 19.8954 20.0049 21C20.0049 22.1046 19.1095 23 18.0049 23Z">
+                        </path></svg>
+                    </button>
+                    <p class = "buttonText">Services</p>
+                </a>
+    
+                <a href = "./mobile-reviews.html" class = "reviews">
+                    <button class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ccc" class = "light-mode-icon icon">
+                            <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26ZM12.0006 15.968L16.2473 18.3451L15.2988 13.5717L18.8719 10.2674L14.039 9.69434L12.0006 5.27502L9.96214 9.69434L5.12921 10.2674L8.70231 13.5717L7.75383 18.3451L12.0006 15.968Z">
+                        </path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#111" class = "dark-mode-icon icon">
+                            <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26ZM12.0006 15.968L16.2473 18.3451L15.2988 13.5717L18.8719 10.2674L14.039 9.69434L12.0006 5.27502L9.96214 9.69434L5.12921 10.2674L8.70231 13.5717L7.75383 18.3451L12.0006 15.968Z">
+                        </path></svg>
+                    </button>
+                    <p class = "buttonText">Reviews</p>
+                </a>
+    
+                <a href = "./mobile-contact.html" class = "contacts">
+                    <button class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ccc" class = "light-mode-icon icon">
+                            <path d="M19 7H24V9H19V7ZM17 12H24V14H17V12ZM20 17H24V19H20V17ZM2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H16C16 18.6863 13.3137 16 10 16C6.68629 16 4 18.6863 4 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM10 11C12.21 11 14 9.21 14 7C14 4.79 12.21 3 10 3C7.79 3 6 4.79 6 7C6 9.21 7.79 11 10 11Z">
+                        </path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#111" class = "dark-mode-icon icon">
+                            <path d="M19 7H24V9H19V7ZM17 12H24V14H17V12ZM20 17H24V19H20V17ZM2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H16C16 18.6863 13.3137 16 10 16C6.68629 16 4 18.6863 4 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM10 11C12.21 11 14 9.21 14 7C14 4.79 12.21 3 10 3C7.79 3 6 4.79 6 7C6 9.21 7.79 11 10 11Z">
+                        </path></svg>
+                    </button>
+                    <p class = "buttonText">Contacts</p>
+                </a>
+            </div>
+    </footer>
+
+
+<script src="./redirect.js"></script>
+<script src="./shared-mobile.js"></script>
+
+</html>

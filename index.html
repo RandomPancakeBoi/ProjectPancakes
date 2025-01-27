@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ProjectPancakes</title>
+
+    <link rel="stylesheet" href="./shared.css">
     <link rel="stylesheet" href="./index.css">
+
+    <script src="./shared.js"></script>
+    <script src="./index.js"></script>
+    <script src="./redirect.js"></script>
+    
 </head>
 <body>
     <!-- Announcement Banner -->
-    <div class="announcement-banner" id="announcement">
-        <strong>Important : </strong>This Is Website Is A Work In Progress. Some Features May Not Work As Intended Initially.
-    </div>
+    <div class="announcement-banner" id="announcement">Hey you! Spotted a bug? Reach out and let me know!!</div>
     
     <!-- Header -->
     <header>
         <div class="menu">
-            <div class = "Wrapper">
-                <a class = "nav">
-                    <div class = "One"></div>
-                    <div class = "Two"></div>
-                    <div class = "Three"></div>     
+            <div class="Wrapper">
+                <a class="nav">
+                    <div class="One"></div>
+                    <div class="Two"></div>
+                    <div class="Three"></div>     
                 </a>
             </div>
             <!-- Dropdown Menu -->
@@ -30,39 +36,89 @@
                 <a href="./contact.html" class="dropdown-item">Contact Us</a><br/>
             </div>
         </div>
-    </header>
 
+        <!-- Mode Switch Slider -->
+        <label class="switch">
+            <input type="checkbox" id="modeSwitch" checked />
+            <span class="slider"></span>
+        </label>
+
+    </header>
 
     <!-- Main Content -->
     <main>
+        <!-- Central Container Section -->
         <div class="central-container">
             <img src="./pfp.png" alt="Central Image" class="central-image">
-            <p class="central-text">
-                At ProjectPancakes, We Provide All-in-One Tech Care, From Repairs To Custom Builds.
-            </p>
+            <div class = "about-me-container">
+                <div class = "hey-title">
+                    <div class = "me-icon">
+                        <img class = "dark-mode-icon" src="https://img.icons8.com/pulsar-color/48/smiling.png" alt="ME">
+                        <img class = "light-mode-icon" src="data:image/png;base64,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" alt="ME">
+                    </div>
+                    <h2>Hey, I’m Oliver, the person behind ProjectPancakes.</h2>
+                </div>
+                <p class="central-text">
+                    My goal is simple: to make tech repairs, upgrades, and advice accessible to everyone. 
+                    Whether you need a device fixed, a custom PC built, or just some help with another tech issue, I’m here for you. <br/><br/>
+                    I’ve been passionate about technology for as long as I can remember. 
+                    Growing up, I was the kid who took apart gadgets just to see how they worked; and that curiosity has stuck with me over the years. 
+                    That’s what led me to start ProjectPancakes in 2018. Since then, I’ve been offering personal, reliable services from the comfort of my home; and, when needed, in others’ homes too. <br/><br/>
+                    What makes ProjectPancakes different is how I treat my customers. 
+                    Whether you’re a first-time customer or a returning one, I’m always happy to chat, answer questions, and make sure you feel confident about your tech. <br/><br/>
+                    I’m here to make the process easy, clear, and stress-free for you.If you need help with tech or just want to talk things through, don’t hesitate to reach out. 
+                    I’m here to make sure you get the best service, no matter what.
+                    </p>
+            </div>
         </div>
 
-        <!-- Social Media Section -->
-        <div class="social-media">
-            <a href="https://facebook.com" target="_blank" class="social-icon">
-                <img src="https://img.icons8.com/?size=48&id=b2h5ow1Hfzpc&format=png" alt="FB">
-            </a>
-            <a href="https://api.whatsapp.com/send/?phone=%2B4407443639793&text&type=phone_number&app_absent=0" target="_blank" class="social-icon">
-                <img src="https://img.icons8.com/?size=48&id=ypXY3Rt1RZ6q&format=png" alt="WA">
-            </a>
-            <a href="<FILENAMEHERE>" target="_blank" class="social-icon">
-                <img src="https://img.icons8.com/?size=48&id=JhnudqGq5SE3&format=png" alt="CU">
-            </a>
-        </div>
+        <!-- Services Tabs Section -->
+         <div class = "service-wrapper">
+            <div class = "service-tabs">
+                <div class = "empty"></div>
+                <div class = "card card-one">
+                    <p class = "tip">Phone Screen Repairs</p>
+                    <p class = "service-tab-text">Lorem Ipsum</p>
+                </div>
+                <div class = "card card-two">
+                    <p class = "tip">Desktop Desires</p>
+                    <p class = "service-tab-text">Lorem Ipsum</p>
+                </div>
+                <div class = "card card-three">
+                    <p class = "tip">Instagram Posts</p>
+                    <p class = "service-tab-text">Lorem Ipsum</p>
+                </div>
+                <div class = "card card-four">                    
+                    <p class = "tip">Programming Puzzles</p>
+                    <p class = "service-tab-text">Lorem Ipsum</p>
+                </div>
+                <div class = "card card-five">
+                    <p class = "tip">Website Source Code</p>
+                    <p class = "service-tab-text">Lorem Ipsum</p>
+                </div>
+
+
+                <div class = "social-card">
+                    <!-- Social Media Section -->
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/projectpancakesofficial/" target="_blank" class="social-icon">
+                            <img class = "dark-mode-icon" src="https://img.icons8.com/pulsar-color/48/instagram-new.png" alt="FB">
+                            <img class = "light-mode-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFOklEQVR4nO1Z3W8UVRRfP/8E9s4uCAH7UpNWo8ZoZWa3tiZCokbWQhtaFuiHiomJD+2DtNXW1nZlZ6pAAsQEqCwlbYE7hHd9EpUnv1pAeECDUd7aGTAkpNecuzuzd2Z2Zu7MfoTE3uRkNzP3nnt+9/7OOfeeiURW22pbbf+fRgh5aHnqwsu6gg9oinpZk9Vbmqze1xWVhBFNVu9THYp6GXSCbpijKsZrstqcnyicsdygFLowzRUznMzOPqLJeKLahusOIPgoGf7m0fKNVzC2KdZ1RT2kybjlzkEcgz7l6L9zEMdAF9WZ183OhcvRH9FlNWtZGRnP65mLKLRCv/kyFxGdwzKnmg2lDHhoc7hM1RyMaTAHzGWZO4uTkcBKrA475278s48hJKWiSDoVReIiEkQdCRIJL6KGYonFbz88fJN17ECLtyyf38xsoeZGmzVC4g2EpGvlGLyjKU2uj+SobG9Km8+f2vQa+WdyztwFCLHcACAmM6t/qESXhxESPytvpfNyfSRnGvn7yCnLuyOdn5jvLrwvfw/zcgHQZPxjkfu4xf7ezfh18WayN9lLzvRlyC+DJ8jtzDwV+D/TO0n2JHtpH14AqRe7zHff9R8lCInjfAAU9a8ihc4KDtoI0ord+N3JHrI4PO0b3xeGT5Iuqdsct70pTQ0HaXtpl0VnY91Wc9yN0Rw8W1kTE1/n2IHi8cAah6nDWjgfjyfIlx1DgRPVFx2DdKwXveC90X8pi43nN+rr6x/3BMBOZKWOlLJPYjf+5tgMGXmrnyQbUmTjEy1UmhvfJqPb+skfYzMOEMjHR9j+5nMkpcICyLHK04luywRzfZ+TTetbXY15csOr5Ow7Byxjuhg68QKICuLX3hRS1HuF+HuPfR5F0lXWYVnOz/ZliBDzpgQI9GFBLAxNOxzbFwASr3gDkPG4puB/4deyA5BkCkog2rC08Vr5UjvB0ml3sicYhQRRi4RprGIIi4Zi4HzQ+P/ptgFz/OmeCdd+EH2YKGRK2QB+HTphGpBoSAUGkGxMmeMhT7j1a32mjRze+TH9rSiA25PzpgEb17cEBgBj9MJ40BV0vKehmow/0BX1KvxWCwD4gV4Y//fEbIUBKOrdQhS6y0MhiPlBDYDcoFeLQq55gFFwmnFiSFJBAYylik6c666wE/MAgIOZ0QdCIlCC1/i6Da3kz/Ez5nhIiMHCaAUAQPKBg5nRD5ITTyKLxRLk3HtZc9xvwyfJurXJ2gMAgWMA2xdAeO0ErDxrvK6opFPc6wm4qgBAptoHLZMAnSBJgZNCdAJ55ek2ynmWNiBy+37fHQsFwO047XbktYPgkeyOjyidQhynuQDcMgZC3cYLAEsnOJj5GQ6c79y8h8vZG50XGl4Apa+UfhOCY8PBDELsz4PHabID+Wn/cXregWjj5bDIJo4rJb8PlL7U805cKTnCXOrtlx9PAPkKtFGTwbpxL66l8Q11W2hBwLBjy3Pt/AAchS0Zz8MzJEjLtTBegFzxbvHSc2ngmD3HLHkCcCstIkG6Ugvjp2xR7c0Xdlr6QAXQF0Cp4i6U+2Brq0mbc8zKl+I+BSCI06HL68BLcC6IEBDm/EojXhKPJ6gO0AU6Wc6DnN8nl9bvV5V4ED5wfJUeJWvjzpALhQWoT0Ue1E9MlwaOOTjPCF9lzu8jn7pP/gESC2RHSPFhjV3KYqoDdIHjbn2+w/tEy1sb5WhQnR4vVSOtkqwUjOerTvM22M5yvw8gP0HStbJo498cX2jM4lc4EbWoIC1A+TAfbUI47GqL1K79Byrgit75vLYSAAAAAElFTkSuQmCC" alt="IG">
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B4407443639793&text&type=phone_number&app_absent=0" target="_blank" class="social-icon">
+                            <img class = "dark-mode-icon" src="https://img.icons8.com/?size=48&id=ypXY3Rt1RZ6q&format=png" alt="WA">
+                            <img class = "light-mode-icon" src="data:image/png;base64,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" alt="WA">
+                        </a>
+                        <a href="https://twitch.tv/randompancakeboi" target="_blank" class="social-icon">
+                            <img class = "dark-mode-icon" src="https://img.icons8.com/?size=48&id=F0VhNaQGnmzq&format=png" alt="TTV">
+                            <img class = "light-mode-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAESklEQVR4nO1ZWWjUQBgOKIoo+tZMllat1FrEA0RRqU224lEVqeJVESl4YD2KeFW0oGKliqJSXZVeE6zWSRcUKVhFkAo+iLbqg6vuDBTf1IL1SfGqjkx2kyZx0022u9su7A8/w85M5v++/MdMZjkuLWlJS1pSSo63tw+XFVIBEf4oI0xlhSREISI/IcKdzBazGRfwNW1kLFTwp0SBlu0U4cdxIQER6Uw6eEXXioGBbyFbLC5Gfn9gBJcg8fsDI2SEKw02O2JeDPrfTZcR/mYkkEjwmtS0kZHGnOBiEZ8/MAYq5J3VpVySRB6oTYjwzUgxqY1nZs4bBYCIeCD+AIJE462ywSYA4iVmzwV7XG6XVNocHogXEwEcRCLA+oBU4+zNK8E5MsI/9BhUiM9KQBC8+UCQ/iSVgCB1RwVf6+8aBxXy3lgBjAnFlLmSBxK2M1y6rYbW33yjtrGMA3sC0XMBKuRU35vHX5r8wexQSPUtxgvS+f4MNzS/VeexNpZxMBACsoKJ9lDjLbK2r9+4mNjr1rCbcRDWxuZgCEdz0IUHEO7tq/d0WGQCrmM3JgJl5fXqHNa68EDk2jsYBIAg0awJS0y/U44AsGiagJz2gDT0Q6ghTvvAhOylNF/cobZJJRCvnfjEmfuqPdYmlUA8NGv8YgrD3911NwIuCCDSowJFpGcwCcydv0W3d873xDkBqODl7JORtYNJ4GBli25v594G5wRsPZNEAmtKqgzf35jOmr05dQgsXXGIQhQ6xFnPQTyQvgxpAgXeXXqJVatPdRvNzFpkICA+iA4Uka0QkWesNfYbF7ZTduzVSiMzzGJXOxL3NxcIEp09t5TWXn+tj5++0E6zJy03EcwQvMVRCUCFfA19zJCvxv7KqtaoBLTNKTdvFa06+zDq3NqmUHmcNmM99TW80PsvXntKc/OKzR4CInIdKsb+vKmr6dGTd00uttPL9Z2OvZU7pZheuPpU77/S+JJOn7nBBJ4XpOc8v3j0gAhEi187kBs2nbF9ZuKkIlp9/pE+v67ptVr/LfO6MjIW8pxTYbdgkW7g3BJgXpi/YHu/O+3x6num0Cso3GV+80D87PEUTnEMPuyBDh0IwpUaiWgEjKHF4p/lgd3cnMkr6eFjtw21PkiLVlRYwX9nVzeuwIcJVDhJVmslYS07s5SV19Gs8Uvott3XbCuQVdeUVFlJ/hWEgk1czH9iIPzYKQnrkVjwFNLd+6CjZyEK0o2lZ//3EhAPxATeRCLkiQ5jTtipW/BX4St65MQd9awfIcR8XCKEXa7aJW0IvFe/BtF0z35ZJeV4NwZSK8et069y4irhm2hGottKwJP5/5tnv52DFz+y276cnKKRXLKkvxCJBJ4H0jeel7zcUBFokxs24H8CIC7jhpLIiFTLiPwOVRPcCxUckFtIGcsFS4j84j3iSi5VBJhju5f3SCVcKgkPxCdhAh8AkPTb7UTIP8ZAwSGJi2MRAAAAAElFTkSuQmCC" alt="TTV">
+                        </a>
+                    </div></div></div></div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>
-            All Media On This Site Are The Exclusive Property Of ProjectPancakes And Were Captured By ProjectPancakes
-        </p>
+        <p>All Media Displayed On This Site Is The Exclusive Property Of ProjectPancakes And Was Captured By ProjectPancakes</p>
     </footer>
-
-    <script src="./index.js"></script>
 </body>
 </html>
