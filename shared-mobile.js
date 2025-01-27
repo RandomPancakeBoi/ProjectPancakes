@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const banner = document.getElementById("announcement"); 
     const modeSwitch = document.getElementById("modeSwitch");
 
+    alert(innerHeight + "," + innerHeight);
     // Check localStorage
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
