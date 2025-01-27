@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modeSwitch = document.getElementById("modeSwitch");
 
     alert(innerHeight + "," + innerHeight);
+    console.log(innerHeight + "," + innerHeight);
     // Check localStorage
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
