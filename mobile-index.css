@@ -10,7 +10,7 @@
 
 .central-image {
     max-width: 500px;
-    width: auto;
+    width: 500px;
     height: auto;
     margin: 0 auto;
 }
