@@ -2,7 +2,7 @@
 .central-container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 40% 50%;
+    grid-template-rows: 40% 60%;
     grid-row-gap: 0px;
     justify-items: stretch;
     align-items: stretch;
@@ -10,7 +10,7 @@
 
 .central-image {
     max-width: 500px;
-    width: 500px;
+    width: auto;
     height: auto;
     margin: 0 auto;
 }
@@ -19,13 +19,6 @@
     text-align: center;
     padding-left: 55px;
     font-size: 18px;
-}
-
-.me-icon {
-    scale: 55%;
-    position: relative;
-    left: -45px;
-    top: 40px;
 }
 
 .central-text {
