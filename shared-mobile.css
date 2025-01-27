@@ -212,6 +212,7 @@ body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  min-width: 100vw;
   color: antiquewhite;
   padding-top: 50px; /* This compensates for the fixed header */
 }
