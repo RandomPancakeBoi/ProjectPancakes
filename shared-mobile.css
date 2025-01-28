@@ -3,12 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1320px;
+  max-width: 718px;
 }
 
 body {
   min-height: 100vh;
   min-width: 100vw;
+  font-size: calc(12px + 1vw);
 }
 
 a {
