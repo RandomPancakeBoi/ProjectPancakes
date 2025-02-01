@@ -18,21 +18,16 @@
     margin-top: 0;
 }
 
-.about-me-container h2 {
+.hey-title {
     text-align: center;
     padding-left: 55px;
     font-size: 25px;
-}
-
-.me-icon {
-    scale: 75%;
-    position: relative;
-    left: 40px;
-    top: 45px;
+    font-weight: bold;
+    margin-top: 50px;
 }
 
 .central-text {
-    margin-top: 0px;
+    margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 50px;
@@ -114,4 +109,52 @@ footer {
 .social-card {
     display: block;
     text-align: center;
+}
+
+
+
+
+/* Media Query for Responsiveness */
+@media screen and (max-width: 1024px) {
+    /* Adjust Footer to Always Stay at Bottom of Page */
+    footer {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        font-size: 11px;
+    }
+
+    /* Hide Social Media Icons on Small Screens */
+    .social-media {
+        display: none;
+    }
+
+    /* Stack Image Above Text */
+    .central-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto auto; /* Allow content to stack */
+        text-align: center; /* Center everything */
+    }
+
+    /* Adjust Image Position */
+    .central-image {
+        margin-top: 20px;
+        width: 80%; /* Scale image to fit */
+        max-width: 400px; /* Limit image width on small screens */
+    }
+
+    /* Adjust Central Text */
+    .central-text {
+        margin-top: 15px; /* Add spacing below the image */
+        font-size: 12px; /* Adjust font size for readability on small screens */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hey-title {
+        font-size: 18px;
+        font-weight: bold;
+        font-weight: 400px;
+        margin-top: 15px;
+    }
 }
