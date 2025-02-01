@@ -107,22 +107,29 @@ header {
 }
 
 .dropdown-item {
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    align-self: auto;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 4px 10px;
     color: antiquewhite;
     text-decoration: none;
-    text-align: center;
     font-size: 1em;
-    transition: background 0.2s ease;
     width: 100%;
+}
+
+.dropdown-item:not(:last-child) {
+    margin-bottom: 2px;
 }
 
 .dropdown-item:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+
+.dropdownIcon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
 }
 
 /* ————————————|———— Slider Formatting ————|———————————— */

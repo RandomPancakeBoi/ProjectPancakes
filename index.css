@@ -1,7 +1,7 @@
 /* Central Container Section */
 .central-container {
     display: grid;
-    grid-template-columns: 650px auto;
+    grid-template-columns: 650px 50%;
     grid-column-gap: 0px;
     justify-content: stretch;
     align-items: center;
@@ -27,7 +27,7 @@
 .me-icon {
     scale: 75%;
     position: relative;
-    left: 150px;
+    left: 40px;
     top: 45px;
 }
 
@@ -98,22 +98,20 @@ footer {
 }
 
 /* Social */
-.social-card {
+.social-media {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: right;
+    justify-content: right;
     margin: 20px 0;
-    width: auto;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
 }
 
 .social-card {
     display: block;
     text-align: center;
-}
-
-.social-card .social-icon {
-    display: block;
-    margin: 10px 0;
-    scale: 85%;
 }

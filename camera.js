@@ -1,13 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const slots = document.querySelectorAll(".slot");
-  
-    slots.forEach(slot => {
-      const hoverEnabled = slot.getAttribute("data-hover") === "true";
-      const imageSlot = slot.querySelector(".image-slot");
-  
-      if (!hoverEnabled) {
-        imageSlot.classList.add("no-hover");
-      }
+document.querySelectorAll('.slot').forEach(slot => {
+    slot.addEventListener('click', () => {
+      const title = slot.querySelector('.title');
+      title.classList.toggle('permanent');
     });
   });
   
