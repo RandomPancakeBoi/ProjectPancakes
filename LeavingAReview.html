@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjectPancakes</title>
     <link rel = "stylesheet" href = "./shared.css">
-    <link rel="stylesheet" href="./reviews.css">
+    <link rel="stylesheet" href="./LeavingAReview.css">
 </head>
 
 <body>
@@ -46,12 +46,6 @@
                     </path></svg>
                     Services
                 </a>
-                <a href="./reviews.html" class="dropdown-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#faebd7" class = "dropdownIcon">
-                        <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26ZM12.0006 15.968L16.2473 18.3451L15.2988 13.5717L18.8719 10.2674L14.039 9.69434L12.0006 5.27502L9.96214 9.69434L5.12921 10.2674L8.70231 13.5717L7.75383 18.3451L12.0006 15.968Z">
-                    </path></svg>
-                    Reviews
-                </a>
                 <a href="./contact.html" class="dropdown-item">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#faebd7" class = "dropdownIcon">
                         <path d="M19 7H24V9H19V7ZM17 12H24V14H17V12ZM20 17H24V19H20V17ZM2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H16C16 18.6863 13.3137 16 10 16C6.68629 16 4 18.6863 4 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM10 11C12.21 11 14 9.21 14 7C14 4.79 12.21 3 10 3C7.79 3 6 4.79 6 7C6 9.21 7.79 11 10 11Z">
@@ -68,10 +62,83 @@
         </label>
 
     </header>
+
     
     <!-- Main Content -->
     <main>
+        <div class="container">
+            <h1>Leave Me A Review</h1>
+            <form id="reviewForm">
+              <div class="form-header">
+                <input type="text" id="name" name="name" placeholder="Your Name*" required>
+                <input type="email" id="email" name="email" placeholder="Your Email*" required>
+              </div>
+        
+              <div class="rating-section">
+                <label for="easeOfUse">Ease Of Use:<span class="required">*</span></label>
+                <div class="stars" id="easeOfUse" data-rating="">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+        
+              <div class="rating-section">
+                <label for="customerService">Customer Service:<span class="required">*</span></label>
+                <div class="stars" id="customerService" data-rating="">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+        
+              <div class="rating-section">
+                <label for="serviceQuality">Service Quality:<span class="required">*</span></label>
+                <div class="stars" id="serviceQuality" data-rating="">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div><hr>
+        
+              <div class="rating-section">
+                <label for="overallRating">Overall Rating:<span class="required">*</span></label>
+                <div class="stars" id="overallRating" data-rating="">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+        
+              <div class="experience-section">
+                <textarea id="experienceDescription" name="experienceDescription" rows="4" placeholder="Share your thoughts..." required></textarea>
+              </div>
+        
+                <div class="form-actions">
+                  <div class="buttons-container">
+                    <label class="custum-file-upload" for="file">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path fill="rgba(75, 85, 99, 1)" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd" fill-rule="evenodd"></path> </g></svg>
+                    </div>
+                    <div class="text">
+                       <span>Click to upload image</span>
+                       </div>
+                       <input type="file" id="file">
+                    </label>
 
+                    <button type="submit" id="submitBtn" disabled>Submit Review</button>
+                </div>
+              </div>
+            </form>
+          </div>
     </main>
 
     <!-- Footer -->
@@ -97,6 +164,6 @@
 </body>
 
 <script src="./shared.js"></script>
-<script src="./reviews.js"></script>
+<script src="./LeavingAReview.js"></script>
 
 </html>
