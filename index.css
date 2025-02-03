@@ -129,7 +129,6 @@ body {
     .central-image {
         margin-top: 20px;
         width: 80%; /* Scale image to fit */
-        max-width: 400px; /* Limit image width on small screens */
         align-items: center;
     }
     
@@ -143,6 +142,7 @@ body {
         font-size: 14px;
         text-align: center;
         position: relative;
+        min-width: 500px;
     }
     
     .hey-title {
@@ -155,10 +155,5 @@ body {
     /* Hide Social Media Icons on Small Screens */
     .social-media {
         display: none;
-    }
-
-    .central-text {
-        min-width: 500px;
-        margin: none;
     }
 }
