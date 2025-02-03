@@ -128,12 +128,13 @@ body {
     
     /* Adjust Image Position */
     .central-image {
-        width: 100%;
+        width: cover;
         height: auto;
-        margin: 0;
+        margin: auto;
         margin-top: 0;
-        align-self: center;
         align-items: center;
+        justify-content: center;
+
     }
     
     /* Adjust Central Text */
