@@ -140,6 +140,9 @@ header {
     width: 30px;
     height: 30px;
     flex-shrink: 0;
+    align-items: center;
+    fill: antiquewhite;
+    justify-content: center;
 }
 
 /* ————————————|———— Slider Formatting ————|———————————— */
