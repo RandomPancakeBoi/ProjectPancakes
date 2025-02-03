@@ -104,8 +104,22 @@ body {
     text-align: center;
 }
 
+/* Source Code Icon */
+.sourceCodeIcon {
+    display: none;
+}
+
 /* Responsiveness */
 @media screen and (max-width: 1024px) {
+    .sourceCodeIcon {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: auto;
+        left: -10px;
+        fill: antiquewhite;
+    }
+
     /* Adjust Footer to Always Stay at Bottom of Page */
     footer {
         position: absolute;
