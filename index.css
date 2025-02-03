@@ -115,10 +115,13 @@ body {
     }
     /* Stack Image Above Text */
     .central-container {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 100%; /* Single column layout */
         grid-template-rows: auto auto; /* Allow content to stack */
         text-align: center; /* Center everything */
+        position: fixed;
         left: 0px;
+        margin: none;
+        padding: none;
         margin-top: 55px;
     }
     
@@ -132,21 +135,30 @@ body {
     
     /* Adjust Central Text */
     .central-text {
-        margin-top: 15px; /* Add spacing below the image */
-        font-size: 12px; /* Adjust font size for readability on small screens */
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-top: 15px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 14px;
+        text-align: center;
+        position: relative;
     }
     
     .hey-title {
+        text-align: center;
+        padding-left: 0px;
         font-size: 18px;
         font-weight: bold;
-        font-weight: 400px;
-        margin-top: 15px;
+        margin-top: 50px;
     }
-
     /* Hide Social Media Icons on Small Screens */
     .social-media {
         display: none;
+    }
+
+    .central-text {
+        min-width: 500px;
+        margin: none;
     }
 }
