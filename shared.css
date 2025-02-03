@@ -315,6 +315,8 @@ body.dark-mode .light-mode-icon {
         font-size: 70%;
         width: cover;
         text-align: left;
+        justify-content: left;
+        align-items: left;
     }
 
     .button-container {
