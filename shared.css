@@ -295,6 +295,13 @@ body.dark-mode .light-mode-icon {
 
 /* Media Query for Responsiveness */
 @media screen and (max-width: 1024px) {
+    footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        font-size: 11px;
+    }
+
     .menu {
         display: none;
     }
@@ -306,7 +313,7 @@ body.dark-mode .light-mode-icon {
 
     .announcement-banner {
         font-size: 80%;
-        width: 100%;
+        width: cover;
     }
 
     .button-container {
