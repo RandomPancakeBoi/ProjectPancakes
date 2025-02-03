@@ -128,7 +128,7 @@ body {
     /* Adjust Image Position */
     .central-image {
         margin-top: 20px;
-        width: 80%; /* Scale image to fit */
+        scale: 80%; /* Scale image to fit */
         align-items: center;
     }
     

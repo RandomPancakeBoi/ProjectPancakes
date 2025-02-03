@@ -361,6 +361,6 @@ body.dark-mode .light-mode-icon {
     }
 
     body {
-        min-width: 100%;
+        min-width: cover;
     }
 }
