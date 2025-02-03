@@ -1,12 +1,12 @@
 /* Central Container Section */
 .central-container {
     display: grid;
-    grid-template-columns: 650px 50%;
-    grid-column-gap: 0px;
+    grid-template-columns: 40% 60%;
+    grid-column-gap: 10px;
     justify-content: stretch;
     align-items: center;
     position: relative;
-    top: 55px;
+    margin-top: 110px;
 }
 
 .central-image {
@@ -35,6 +35,10 @@
     font-size: 20px;
     text-align: center;
     position: relative;
+}
+
+body {
+    align-items: center;
 }
 
 
@@ -81,17 +85,6 @@
     font-size: .7em;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: transparent;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 11px;
-}
-
 /* Social */
 .social-media {
     display: flex;
@@ -123,26 +116,23 @@ footer {
         width: 100%;
         font-size: 11px;
     }
-
-    /* Hide Social Media Icons on Small Screens */
-    .social-media {
-        display: none;
-    }
-
     /* Stack Image Above Text */
     .central-container {
         grid-template-columns: 1fr; /* Single column layout */
         grid-template-rows: auto auto; /* Allow content to stack */
         text-align: center; /* Center everything */
+        left: 0px;
+        margin-top: 55px;
     }
-
+    
     /* Adjust Image Position */
     .central-image {
         margin-top: 20px;
         width: 80%; /* Scale image to fit */
         max-width: 400px; /* Limit image width on small screens */
+        align-items: center;
     }
-
+    
     /* Adjust Central Text */
     .central-text {
         margin-top: 15px; /* Add spacing below the image */
@@ -150,11 +140,16 @@ footer {
         padding-left: 20px;
         padding-right: 20px;
     }
-
+    
     .hey-title {
         font-size: 18px;
         font-weight: bold;
         font-weight: 400px;
         margin-top: 15px;
+    }
+
+    /* Hide Social Media Icons on Small Screens */
+    .social-media {
+        display: none;
     }
 }

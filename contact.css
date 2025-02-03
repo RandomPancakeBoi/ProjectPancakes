@@ -37,10 +37,7 @@ label {
     display: block;
 }
 
-input,
-select,
-textarea,
-button {
+input, select, textarea, .buttonContacts {
     width: 100%;
     padding: 10px;
     border: 1px rgba(255, 255, 255);
@@ -48,14 +45,14 @@ button {
     box-sizing: border-box;
 }
 
-button {
+.sumbitContacts {
     background-color: #007BFF;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-button:disabled {
+.submitContacts:disabled {
     background-color: rgba(255, 0, 0, 0.4);
     cursor: not-allowed;
 }
@@ -63,17 +60,6 @@ button:disabled {
 h2 {
     text-align: center;
     padding-top: 20px;
-}
-
-/* Footer */
-.main-footer {
-    text-align: center;
-    padding: 20px;
-    background: transparent; /* Fully transparent */
-    position: fixed;
-    bottom: 0;
-    font-size: 11px;
-    width: 100%;
 }
 
 /* Social Media Section */
@@ -84,8 +70,36 @@ h2 {
     right: 0;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+/* Media Query for Responsiveness */
+@media screen and (max-width: 1024px) {
+    .image-container {
+        grid-template-columns: auto auto;
+        grid-template-rows: 25% 25%;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        width: 100%;
+        position: absolute;
+        top: 55px;
+        left: 0;
+    }
+    /* Adjust Footer to Always Stay at Bottom of Page */
+    footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        font-size: 11px;
+    }
+
+    /* Hide Social Media Icons on Small Screens */
+    .social-media {
+        display: none;
+    }
+
+    /* Hide Social Media Icons on Small Screens */
+    .social-media {
+        display: none;
+    }
 }
