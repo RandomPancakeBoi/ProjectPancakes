@@ -380,7 +380,7 @@ body.dark-mode .light-mode-icon {
     }
 
     .mobileToggle  {
-        --color: #ccc;
+        --color: #faebd7;
         --size: 30px;
         display: flex;
         justify-content: center;
