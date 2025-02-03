@@ -292,6 +292,10 @@ body.dark-mode .light-mode-icon {
     display: none;
 }
 
+/* Hide Mobile Toggle */
+.mobileToggle {
+    display: none;
+}
 
 /* Media Query for Responsiveness */
 @media screen and (max-width: 1024px) {
@@ -314,9 +318,9 @@ body.dark-mode .light-mode-icon {
     .announcement-banner {
         font-size: 70%;
         width: cover;
-        text-align: left;
-        justify-content: left;
-        align-items: left;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .button-container {
@@ -359,7 +363,7 @@ body.dark-mode .light-mode-icon {
         width: auto;
     }
 
-    a {
+    .navButton {
         text-align: center;
         text-decoration: none;
         color: inherit;
@@ -373,5 +377,66 @@ body.dark-mode .light-mode-icon {
     body {
         min-width: cover;
         min-height: 150%;
+    }
+
+    .mobileToggle  {
+        --color: #ccc;
+        --size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        position: relative;
+        cursor: pointer;
+        font-size: var(--size);
+        user-select: none;
+        fill: var(--color);
+        z-index: 10000;
+        left: 98%;
+        padding-right: 5px;
+    }
+      
+    .mobileToggle  .moon {
+        position: absolute;
+        animation: keyframes-fill .5s;
+    }
+      
+    .mobileToggle  .sun {
+        position: absolute;
+        display: none;
+        animation: keyframes-fill .5s;
+    }
+      
+    /* On */
+    .mobileToggle input:checked ~ .moon {
+        display: none;
+    }
+      
+    .mobileToggle  input:checked ~ .sun {
+        display: block;
+    }
+      
+    /* Hide */
+    .mobileToggle  input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+      
+    /* Animation */
+    @keyframes keyframes-fill {
+        0% {
+          transform: rotate(-360deg) scale(0);
+          opacity: 0;
+        }
+      
+        75% {
+          transform: rotate(25deg);
+        }
+    }
+
+    .switch {
+        display: none;
     }
 }

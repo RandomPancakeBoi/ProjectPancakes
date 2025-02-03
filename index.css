@@ -104,7 +104,7 @@ body {
     text-align: center;
 }
 
-/* Media Query for Responsiveness */
+/* Responsiveness */
 @media screen and (max-width: 1024px) {
     /* Adjust Footer to Always Stay at Bottom of Page */
     footer {
