@@ -372,6 +372,6 @@ body.dark-mode .light-mode-icon {
 
     body {
         min-width: cover;
-        min-height: (cover + 200px);
+        min-height: 150%;
     }
 }
