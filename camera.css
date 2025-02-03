@@ -99,17 +99,6 @@ h3 {
     pointer-events: none;
 }
 
-/* Footer */
-.main-footer {
-    text-align: center;
-    padding: 20px;
-    background: transparent;
-    position: fixed;
-    bottom: 0;
-    font-size: 11px;
-    width: 100%;
-}
-
 /* Social Media Section */
 .social-media {
     scale: 75%;

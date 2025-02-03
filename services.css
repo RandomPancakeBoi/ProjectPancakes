@@ -12,9 +12,9 @@
 /* Social Media Section */
 .social-media {
     scale: 75%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    right: 0;
+    right: -65px;
 }
 
 footer {

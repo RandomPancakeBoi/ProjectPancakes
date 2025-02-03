@@ -65,11 +65,10 @@ h2 {
 /* Social Media Section */
 .social-media {
     scale: 75%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    right: 0;
+    right: -65px;
 }
-
 /* Media Query for Responsiveness */
 @media screen and (max-width: 1024px) {
     .image-container {
