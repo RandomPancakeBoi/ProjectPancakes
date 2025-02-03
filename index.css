@@ -123,6 +123,7 @@ body {
         margin: none;
         padding: none;
         margin-top: 55px;
+        min-width: 500px;
     }
     
     /* Adjust Image Position */
@@ -142,7 +143,6 @@ body {
         font-size: 14px;
         text-align: center;
         position: relative;
-        min-width: 500px;
     }
     
     .hey-title {
