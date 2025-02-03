@@ -162,4 +162,11 @@ body {
     .social-media {
         display: none;
     }
+
+    footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        font-size: 11px;
+    }
 }
