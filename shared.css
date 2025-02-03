@@ -312,8 +312,9 @@ body.dark-mode .light-mode-icon {
     }
 
     .announcement-banner {
-        font-size: 80%;
+        font-size: 70%;
         width: cover;
+        text-align: left;
     }
 
     .button-container {
