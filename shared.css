@@ -305,7 +305,7 @@ body.dark-mode .light-mode-icon {
     }
 
     .announcement-banner {
-        font-size: 12px;
+        font-size: 80%;
         width: 100%;
     }
 
@@ -361,6 +361,6 @@ body.dark-mode .light-mode-icon {
     }
 
     body {
-        min-width: 500px;
+        min-width: 100%;
     }
 }
