@@ -56,6 +56,12 @@ header {
     height: 50px;
 }
 
+#PageTitle {
+    display: block;
+    margin: auto;
+    text-decoration: underline;
+}
+
 /* ————————————|———— Hamburger Formatting ————|———————————— */
 .One {
     width: 25px;

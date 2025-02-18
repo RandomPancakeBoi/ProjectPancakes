@@ -59,7 +59,7 @@ input[type="checkbox"] {
     margin-top: 10px;
 }
   
-button {
+.formButton {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -69,7 +69,7 @@ button {
     text-align: center;
 }
   
-button:disabled {
+.formButton:disabled {
     background-color: rgba(255, 0, 0, 0.562);
 }
   
@@ -124,7 +124,7 @@ button:disabled {
     align-items: center;
 }
   
-.buttons-container {
+.buttons-container2 {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -132,7 +132,7 @@ button:disabled {
     gap: 10px;
 }
   
-.buttons-container button {
+.buttons-container2 button {
     width: 70%; /* Each button takes up 48% of the space */
 }
 
@@ -152,13 +152,13 @@ button:disabled {
     border-radius: 10px;
 }
   
-.custum-file-upload .icon {
+.custum-file-upload .icons {
     display: flex;
     align-items: center;
     justify-content: center;
 }
   
-.custum-file-upload .icon svg {
+.custum-file-upload .icons svg {
     height: 40px;
 }
   
@@ -179,4 +179,38 @@ button:disabled {
 
 hr {
     border-top: 2px #747373;
+}
+
+body {
+    position: relative;
+    top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 1024px) {
+    /* Hide Social Media Icons on Small Screens */
+    .social-media {
+        display: none;
+    }
+
+    #reviewForm {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    body {
+        top: 55px;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        font-size: 11px;
+    }
 }

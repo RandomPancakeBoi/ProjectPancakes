@@ -1,7 +1,7 @@
 /* Central Container Section */
 .central-container {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 40% 55%;
     grid-column-gap: 10px;
     justify-content: stretch;
     align-items: center;

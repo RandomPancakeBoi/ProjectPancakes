@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const starContainers = document.querySelectorAll('.stars');
   
     starContainers.forEach(function (starContainer) {
-      const stars = starContainer.querySelectorAll('.star');
+		const stars = starContainer.querySelectorAll('.star');
   
-      stars.forEach(function (star, index) {
+      	stars.forEach(function (star, index) {
         // Highlight stars on hover
         star.addEventListener('mouseover', function () {
           highlightStars(starContainer, index + 1);
@@ -26,14 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Highlight stars up to the specified index
     function highlightStars(starContainer, index) {
-      const stars = starContainer.querySelectorAll('.star');
-      stars.forEach(function (star, i) {
-        if (i < index) {
-          star.classList.add('highlighted');
-        } else {
-          star.classList.remove('highlighted');
-        }
-      });
+      	const stars = starContainer.querySelectorAll('.star');
+      	stars.forEach(function (star, i) {
+        	if (i < index) {
+          	star.classList.add('highlighted');
+        	} 
+			else {
+          	star.classList.remove('highlighted');
+        	}
+    	});
     }
   
     // Clear all star highlights
@@ -56,41 +57,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-  
-    // Form submission logic
-    const form = document.getElementById("reviewForm");
-    const submitButton = document.getElementById("submitBtn");
-  
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-  
-      // Get form values
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const experienceDescription = document.getElementById("experienceDescription").value;
-      const stars = document.querySelectorAll(".stars .selected").length;
-
-
-        
-    // Handle file upload interaction (with label click triggering file input)
-    const fileInput = document.getElementById("fileUpload");
-    const fileLabel = document.querySelector('label[for="fileUpload"]');
-  
-    fileLabel.addEventListener('click', function () {
-      fileInput.click(); // Trigger the file input dialog
-    });
-
-    // Submit form or send data
-    alert("Form Submitted Successfully!");
-  
-    // Example: To send data to a server, you could use AJAX here
-    // Example: 
-    // const formData = new FormData(form);
-    // fetch('your-server-endpoint', {
-    //   method: 'POST',
-    //   body: formData
-      // });
-    });
-  
-  });
+})
   
