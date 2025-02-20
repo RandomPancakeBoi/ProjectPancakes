@@ -306,6 +306,31 @@ body.dark-mode .light-mode-icon {
     display: none;
 }
 
+/* Page Titles */
+.ptitle{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ptitle.visible {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    z-index: 1000;
+    height: 75px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    transition: height 0.8s ease, opacity 0.8s ease, visibility 0.8s ease;
+}
+
 /* Media Query for Responsiveness */
 @media screen and (max-width: 1024px) {
     footer {

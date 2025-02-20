@@ -13,6 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
         banner.classList.remove("visible"); // Banner Go Brr
     }, 15000);
 
+    const PageTitle = document.getElementById("PageTitle");
+    setTimeout(() => {
+        PageTitle.classList.remove("visible");
+    }, 1);
+    setTimeout(() => {
+        PageTitle.classList.add("visible");
+    }, 15500);
+
     // Check localStorage
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
