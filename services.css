@@ -23,21 +23,48 @@ footer {
     width: 100%;
 }
 
+/* Packages Section */
+.service-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 65%;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    justify-items: stretch;
+    align-items: stretch;
+    position: relative;
+    margin: auto 25px auto 25px;
+    text-align: center;
+    top: 75px;
+    z-index: 0;
+}
+
+.card {
+    align-items: center;
+    position: relative;
+    background-color: rgba(250, 235, 215, 0.3);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 400ms;
+    height: 450px;
+}
+
+.card:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.tip {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.package-icon {
+    width: 24px;
+    height: auto;
+}
+
 /* Media Query for Responsiveness */
 @media screen and (max-width: 1024px) {
-    .image-container {
-        grid-template-columns: auto auto;
-        grid-template-rows: 25% 25%;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-top: 0px;
-        width: 100%;
-        position: absolute;
-        top: 55px;
-        left: 0;
-    }
     /* Adjust Footer to Always Stay at Bottom of Page */
     footer {
         position: fixed;
@@ -51,8 +78,31 @@ footer {
         display: none;
     }
 
-    /* Hide Social Media Icons on Small Screens */
-    .social-media {
-        display: none;
+    .service-tabs {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 150px 150px 150px 150px;
+        grid-row-gap: 25px;
+        padding-bottom: 50px;
+        justify-items: stretch;
+        align-items: stretch;
+        position: relative;
+        margin: auto 30px auto 30px;
+        text-align: center;
+        top: 45px;
+    }
+
+    .card {
+        align-items: center;
+        position: relative;
+        background-color: rgba(250, 235, 215, 0.3);
+        border-radius: 15px;
+        cursor: pointer;
+        transition: 400ms;
+        height: 150px;
+    }
+    
+    main {
+        padding-bottom: 100px;
     }
 }

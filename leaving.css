@@ -32,7 +32,7 @@ main {
     border-radius: 5px;
 }
 
-h1 {
+.formtitle {
     text-align: center;
     font-size: 24px;
 }
@@ -201,10 +201,7 @@ body {
 
     body {
         top: 55px;
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        position: relative;
     }
 
     footer {

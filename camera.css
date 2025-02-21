@@ -22,6 +22,12 @@ body {
 
 .slot {
     margin: 10px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.slot:hover {
+    transform: scale(1.1, 1.1);
 }
 
 h3 {
@@ -105,6 +111,10 @@ h3 {
     position: absolute;
     bottom: 0;
     right: -65px;
+}
+
+main {
+    padding-bottom: 100px;
 }
 
 /* Media Query for Responsiveness */
