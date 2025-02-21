@@ -64,6 +64,45 @@ footer {
     height: auto;
 }
 
+/* FAQ Formatting */
+.faq {
+    position: absolute;
+    bottom: 50px;
+    align-items: center;
+    background-color: rgba(250, 235, 215, 0.3);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 400ms;
+    height: 300px;
+    width: 82.5%;
+    margin: auto 150px auto 150px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.faqtitle {
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 0;
+}
+
+.faq-icon {
+    width: 24px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.faqheading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 5px;
+    margin: 5px;
+}
+
+.faqmaintext {
+    margin: 5px;
+}
+
 /* Media Query for Responsiveness */
 @media screen and (max-width: 1024px) {
     /* Adjust Footer to Always Stay at Bottom of Page */
