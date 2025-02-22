@@ -32,7 +32,7 @@ footer {
     grid-row-gap: 25px;
     justify-items: stretch;
     align-items: stretch;
-    position: relative;
+    position: fixed;
     margin: auto 25px auto 25px;
     text-align: center;
     top: 55px;
