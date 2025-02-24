@@ -217,6 +217,7 @@ footer {
     bottom: 0;
     width: 100%;
     font-size: 11px;
+    transition: 400ms;
 }
 
 /* ————————————|———— Social Media Formatting ————|———————————— */
@@ -240,6 +241,7 @@ footer {
     background: rgba(255, 255, 255, 0.0);
     transition: background 0.3s ease;
     display: block;
+    transition: 400ms;
 }
 
 /* Hover Effect */

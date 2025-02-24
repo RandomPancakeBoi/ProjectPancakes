@@ -6,6 +6,8 @@
     <title>ProjectPancakes</title>
     <link rel = "stylesheet" href = "./shared.css">
     <link rel="stylesheet" href="./contact.css">
+
+    <script src = "./contact.js"></script>
 </head>
 <body>
     <!-- Announcement Banner -->
@@ -82,72 +84,54 @@
 
     </header>
     
-    <!-- Contact Form -->
-    <div class = "form-container">
-        <form id = "emailForm" action= "https://formsubmit.co/goodwin3117+forms@gmail.com" method = "POST" >
-            <div class = "form-row">
-                <div class = "input-group">
-                    <label for = "forename">Forename</label>
-                    <input type = "text" id = "forename" required>
+    <main>
+        <div class="form-container">
+            <h1>My Simple Contact Form</h1>
+            <form id="emailForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="0538e631-2d71-4b7a-b39a-387e788b149e">
+                <div class="form-row">
+                    <div class="input-group">
+                        <input type="text" id="name" name="name" placeholder="Your Preferred Name" required>
+                    </div>
                 </div>
-                <div class = "input-group">
-                    <label for = "surname">Surname</label>
-                    <input type = "text" id = "surname" required>
+        
+                <div class="input-group">
+                    <label class="pcmethod" for="options">Preferred Contact Method</label>
+                    <div class="Toggles">
+                        <label class="Title" for="contactByPhone">Phone:</label>
+                        <input type="radio" id="contactByPhone" name="contactMethod" value="Phone" onchange="toggleContactInputs()">
+                        <label class="Title" for="contactByEmail">Email:</label>
+                        <input type="radio" id="contactByEmail" name="contactMethod" value="Email" onchange="toggleContactInputs()">
+                    </div>
                 </div>
-            </div>
-
-            <div class = "input-group">
-                <label for = "email">Email Address</label>
-                <input type = "email" id = "email" required>
-            </div>
-
-            <div class = "input-group">
-                <label for = "options">Select An Option</label>
-                <select id = "options" required>
-                    <option value = "" disabled selected>Select An Option</option>
-                    <option value = "Option 1">1</option>
-                    <option value = "Option 2">2</option>
-                    <option value = "Option 3">3</option>
-                    <option value = "Option 4">4</option>
-                    <option value = "Option 5">5</option>
-                    <option value = "Option 6">6</option>
-                    <option value = "Other">Other</option>
-                </select>
-            </div>
-
-            <div class = "input-group">
-                <label for = "details">Description</label>
-                <textarea id = "details" rows = "4" required></textarea>
-            </div>
-
-            <div class = "input-group">
-                <label for ="fileUpload">Upload</label>
-                <input type = "file" id = "fileUpload" accept = "*">
-            </div>
-
-            <button type = "submit" id = "submitButton" class = "submitContact" disabled>Submit</button>
-        </form>
-    </div>
+        
+                <div class="input-group email" id="emailInput" style="display:none;">
+                    <input type="email" id="email" name="email" placeholder="Your Email Address">
+                </div>
+        
+                <div class="input-group number" id="phoneInput" style="display:none;">
+                    <input type="tel" id="pnumber" name="phone" placeholder="Your Phone Number">
+                </div>
+        
+                <div class="input-group">
+                    <textarea id="details" name="message" rows="4" placeholder="What is your question?" required></textarea>
+                </div>
+        
+                <div class="input-group">
+                    <label for="fileUpload">Upload Image (Optional)</label>
+                    <input type="file" id="fileUpload" accept="image/png, image/jpeg">
+                </div>
+        
+                <button type="submit" id="submitButton" class="submitContacts" disabled>Submit Enquiry</button>
+            </form>
+        </div>
+        
+    </main>
+    
 
     <!-- Footer -->
     <footer>
         <p class = "footerText">All Media Displayed On This Site Is The Exclusive Property Of ProjectPancakes And Was Captured By ProjectPancakes</p>
-
-        <!-- Social Media Section -->
-        <div class="social-media">
-            <a href="https://www.instagram.com/projectpancakesofficial/" target="_blank" class="social-icon">
-                <img class = "dark-mode-icon" src="https://img.icons8.com/pulsar-color/48/instagram-new.png" alt="FB">
-                <img class = "light-mode-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFOklEQVR4nO1Z3W8UVRRfP/8E9s4uCAH7UpNWo8ZoZWa3tiZCokbWQhtaFuiHiomJD+2DtNXW1nZlZ6pAAsQEqCwlbYE7hHd9EpUnv1pAeECDUd7aGTAkpNecuzuzd2Z2Zu7MfoTE3uRkNzP3nnt+9/7OOfeeiURW22pbbf+fRgh5aHnqwsu6gg9oinpZk9Vbmqze1xWVhBFNVu9THYp6GXSCbpijKsZrstqcnyicsdygFLowzRUznMzOPqLJeKLahusOIPgoGf7m0fKNVzC2KdZ1RT2kybjlzkEcgz7l6L9zEMdAF9WZ183OhcvRH9FlNWtZGRnP65mLKLRCv/kyFxGdwzKnmg2lDHhoc7hM1RyMaTAHzGWZO4uTkcBKrA475278s48hJKWiSDoVReIiEkQdCRIJL6KGYonFbz88fJN17ECLtyyf38xsoeZGmzVC4g2EpGvlGLyjKU2uj+SobG9Km8+f2vQa+WdyztwFCLHcACAmM6t/qESXhxESPytvpfNyfSRnGvn7yCnLuyOdn5jvLrwvfw/zcgHQZPxjkfu4xf7ezfh18WayN9lLzvRlyC+DJ8jtzDwV+D/TO0n2JHtpH14AqRe7zHff9R8lCInjfAAU9a8ihc4KDtoI0ord+N3JHrI4PO0b3xeGT5Iuqdsct70pTQ0HaXtpl0VnY91Wc9yN0Rw8W1kTE1/n2IHi8cAah6nDWjgfjyfIlx1DgRPVFx2DdKwXveC90X8pi43nN+rr6x/3BMBOZKWOlLJPYjf+5tgMGXmrnyQbUmTjEy1UmhvfJqPb+skfYzMOEMjHR9j+5nMkpcICyLHK04luywRzfZ+TTetbXY15csOr5Ow7Byxjuhg68QKICuLX3hRS1HuF+HuPfR5F0lXWYVnOz/ZliBDzpgQI9GFBLAxNOxzbFwASr3gDkPG4puB/4deyA5BkCkog2rC08Vr5UjvB0ml3sicYhQRRi4RprGIIi4Zi4HzQ+P/ptgFz/OmeCdd+EH2YKGRK2QB+HTphGpBoSAUGkGxMmeMhT7j1a32mjRze+TH9rSiA25PzpgEb17cEBgBj9MJ40BV0vKehmow/0BX1KvxWCwD4gV4Y//fEbIUBKOrdQhS6y0MhiPlBDYDcoFeLQq55gFFwmnFiSFJBAYylik6c666wE/MAgIOZ0QdCIlCC1/i6Da3kz/Ez5nhIiMHCaAUAQPKBg5nRD5ITTyKLxRLk3HtZc9xvwyfJurXJ2gMAgWMA2xdAeO0ErDxrvK6opFPc6wm4qgBAptoHLZMAnSBJgZNCdAJ55ek2ynmWNiBy+37fHQsFwO047XbktYPgkeyOjyidQhynuQDcMgZC3cYLAEsnOJj5GQ6c79y8h8vZG50XGl4Apa+UfhOCY8PBDELsz4PHabID+Wn/cXregWjj5bDIJo4rJb8PlL7U805cKTnCXOrtlx9PAPkKtFGTwbpxL66l8Q11W2hBwLBjy3Pt/AAchS0Zz8MzJEjLtTBegFzxbvHSc2ngmD3HLHkCcCstIkG6Ugvjp2xR7c0Xdlr6QAXQF0Cp4i6U+2Brq0mbc8zKl+I+BSCI06HL68BLcC6IEBDm/EojXhKPJ6gO0AU6Wc6DnN8nl9bvV5V4ED5wfJUeJWvjzpALhQWoT0Ue1E9MlwaOOTjPCF9lzu8jn7pP/gESC2RHSPFhjV3KYqoDdIHjbn2+w/tEy1sb5WhQnR4vVSOtkqwUjOerTvM22M5yvw8gP0HStbJo498cX2jM4lc4EbWoIC1A+TAfbUI47GqL1K79Byrgit75vLYSAAAAAElFTkSuQmCC" alt="IG">
-            </a>
-                <a href="https://api.whatsapp.com/send/?phone=%2B4407443639793&text&type=phone_number&app_absent=0" target="_blank" class="social-icon">
-                <img class = "dark-mode-icon" src="https://img.icons8.com/?size=48&id=ypXY3Rt1RZ6q&format=png" alt="WA">
-                <img class = "light-mode-icon" src="data:image/png;base64,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" alt="WA">
-            </a>
-            <a href="https://twitch.tv/randompancakeboi" target="_blank" class="social-icon">
-                <img class = "dark-mode-icon" src="https://img.icons8.com/?size=48&id=F0VhNaQGnmzq&format=png" alt="TTV">
-                <img class = "light-mode-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAESklEQVR4nO1ZWWjUQBgOKIoo+tZMllat1FrEA0RRqU224lEVqeJVESl4YD2KeFW0oGKliqJSXZVeE6zWSRcUKVhFkAo+iLbqg6vuDBTf1IL1SfGqjkx2kyZx0022u9su7A8/w85M5v++/MdMZjkuLWlJS1pSSo63tw+XFVIBEf4oI0xlhSREISI/IcKdzBazGRfwNW1kLFTwp0SBlu0U4cdxIQER6Uw6eEXXioGBbyFbLC5Gfn9gBJcg8fsDI2SEKw02O2JeDPrfTZcR/mYkkEjwmtS0kZHGnOBiEZ8/MAYq5J3VpVySRB6oTYjwzUgxqY1nZs4bBYCIeCD+AIJE462ywSYA4iVmzwV7XG6XVNocHogXEwEcRCLA+oBU4+zNK8E5MsI/9BhUiM9KQBC8+UCQ/iSVgCB1RwVf6+8aBxXy3lgBjAnFlLmSBxK2M1y6rYbW33yjtrGMA3sC0XMBKuRU35vHX5r8wexQSPUtxgvS+f4MNzS/VeexNpZxMBACsoKJ9lDjLbK2r9+4mNjr1rCbcRDWxuZgCEdz0IUHEO7tq/d0WGQCrmM3JgJl5fXqHNa68EDk2jsYBIAg0awJS0y/U44AsGiagJz2gDT0Q6ghTvvAhOylNF/cobZJJRCvnfjEmfuqPdYmlUA8NGv8YgrD3911NwIuCCDSowJFpGcwCcydv0W3d873xDkBqODl7JORtYNJ4GBli25v594G5wRsPZNEAmtKqgzf35jOmr05dQgsXXGIQhQ6xFnPQTyQvgxpAgXeXXqJVatPdRvNzFpkICA+iA4Uka0QkWesNfYbF7ZTduzVSiMzzGJXOxL3NxcIEp09t5TWXn+tj5++0E6zJy03EcwQvMVRCUCFfA19zJCvxv7KqtaoBLTNKTdvFa06+zDq3NqmUHmcNmM99TW80PsvXntKc/OKzR4CInIdKsb+vKmr6dGTd00uttPL9Z2OvZU7pZheuPpU77/S+JJOn7nBBJ4XpOc8v3j0gAhEi187kBs2nbF9ZuKkIlp9/pE+v67ptVr/LfO6MjIW8pxTYbdgkW7g3BJgXpi/YHu/O+3x6num0Cso3GV+80D87PEUTnEMPuyBDh0IwpUaiWgEjKHF4p/lgd3cnMkr6eFjtw21PkiLVlRYwX9nVzeuwIcJVDhJVmslYS07s5SV19Gs8Uvott3XbCuQVdeUVFlJ/hWEgk1czH9iIPzYKQnrkVjwFNLd+6CjZyEK0o2lZ//3EhAPxATeRCLkiQ5jTtipW/BX4St65MQd9awfIcR8XCKEXa7aJW0IvFe/BtF0z35ZJeV4NwZSK8et069y4irhm2hGottKwJP5/5tnv52DFz+y276cnKKRXLKkvxCJBJ4H0jeel7zcUBFokxs24H8CIC7jhpLIiFTLiPwOVRPcCxUckFtIGcsFS4j84j3iSi5VBJhju5f3SCVcKgkPxCdhAh8AkPTb7UTIP8ZAwSGJi2MRAAAAAElFTkSuQmCC" alt="TTV">
-            </a>
-        </div></div></div></div>
 
         <div class="button-container">
             <a href = "./index.html" class = "home navButton">
@@ -219,6 +203,4 @@
 </body>
 
 <script src="./shared.js"></script>
-<script src="./contact.js"></script>
-
 </html>

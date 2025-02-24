@@ -7,7 +7,7 @@ body {
 }
 
 .form-container {
-    max-width: 600px;
+    max-width: 500px;
     margin: 50px auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.3);
@@ -31,25 +31,35 @@ form {
     flex: 1;
 }
 
+.input-group input[type="checkbox"] {
+    margin-right: 45px;
+}
+
+.Title {
+    margin-right: 0px;
+}
+
 label {
     font-weight: bold;
     margin-bottom: 5px;
     display: block;
 }
 
-input, select, textarea, .buttonContacts {
+input, select, textarea {
     width: 100%;
     padding: 10px;
-    border: 1px rgba(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-.sumbitContacts {
+.submitContacts {
     background-color: #007BFF;
     color: white;
     border: none;
     cursor: pointer;
+    padding: 10px; /* Add padding for button */
+    font-size: 16px; /* Increase font size for better readability */
 }
 
 .submitContacts:disabled {
@@ -57,18 +67,48 @@ input, select, textarea, .buttonContacts {
     cursor: not-allowed;
 }
 
-h2 {
+h1 {
     text-align: center;
-    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: underline;
 }
 
-/* Social Media Section */
-.social-media {
-    scale: 75%;
-    position: absolute;
-    bottom: 0;
-    right: -65px;
+/* Adjust styles for checkboxes */
+.input-group div {
+    display: flex;
+    align-items: center;
 }
+
+input[type = "radio"] {
+    line-height: normal;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    position: relative;
+    bottom: 3px;
+}
+
+
+input::placeholder {
+    text-align: center;
+}
+
+textarea::placeholder {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pcmethod {
+    text-align: center;
+    font-size: 22px;
+    padding-bottom: 5px;
+}
+
+.Toggles {
+    padding-right: 50px;
+    padding-left: 120px;
+}
+
 /* Media Query for Responsiveness */
 @media screen and (max-width: 1024px) {
     .image-container {
