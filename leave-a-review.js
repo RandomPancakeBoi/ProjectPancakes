@@ -1,5 +1,5 @@
 const form = document.getElementById("review-form");
-const SHEET_URL = "https://script.google.com/macros/s/AKfycbyEInXcECLEYybSIupXdWSS9AcdoMXgSKk6zxieuWmLIa7lkYhCTsCPDB2d_7BWUNAEZg/exec"; // Replace with your deployed Apps Script URL
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbw9jqJKqyDt7H5cUXGWrKqfM9s7wMru2SlvnMsQnsWk2fZ32lu26U6O7o883rgXp4PhAQ/exec"; // Replace with your deployed Apps Script URL
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
