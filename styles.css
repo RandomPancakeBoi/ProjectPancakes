@@ -1,0 +1,548 @@
+/* ============================================================
+   Global Styles and Variables
+   ============================================================ */
+:root {
+  --transition-speed: 0.4s;
+  --font-main: 'Segoe UI', Arial, sans-serif;
+  --bg-main: #f4f4f4;
+  --bg-overlay: linear-gradient(to bottom right, rgba(100, 20, 100, 0.85), rgba(255, 80, 60, 0.75), rgba(230, 220, 90, 0.85));
+  --text-main: #1a1a1a;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --accent: #ff5b4d;
+}
+
+[data-theme="dark"] {
+  --bg-main: #141414;
+  --bg-overlay: linear-gradient(to bottom right, rgba(41, 15, 49, 0.83), rgba(7, 14, 49, 0.83), rgba(1, 47, 49, 0.83));
+  --text-main: #eaeaea;
+  --card-bg: rgba(0, 0, 0, 0.6);
+  --accent: #6c63ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-main);
+  background: var(--bg-main);
+  transition: background var(--transition-speed), color var(--transition-speed);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  background: var(--card-bg);
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: transform var(--transition-speed);
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg);
+}
+
+.theme-icon {
+  width: 28px;
+  height: 28px;
+  fill: var(--text-main);
+  transition: all 0.5s ease;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-overlay);
+  z-index: 0;
+}
+
+.hero-logo {
+  z-index: 99;
+  width: 80vw;
+  max-width: 700px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.hero-content {
+  z-index: 1;
+  color: #fff;
+}
+
+.hero-subtitle {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 25px;
+}
+
+.hero-btn {
+  background-color: #4f0e08 !important;
+  color: #fff;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform var(--transition-speed), background var(--transition-speed);
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Ghost button style (like old "Our Services") */
+.btn.ghost {
+  background: transparent;
+  /* No fill */
+  border: 2px solid #4f0e08;
+  /* subtle white border for hero */
+  color: #000;
+  /* white text for hero */
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+  background-color: transparent !important;
+}
+
+/* Hover effect */
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+  /* subtle fill on hover */
+  transform: translateY(-1px);
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .btn.primary.hero-btn {
+  background-color: #b21d40 !important;
+  /* "See Services" button */
+}
+
+[data-theme="dark"] .btn.ghost.hero-btn {
+  border-color: #b21d40;
+  /* outline of "Contact Us" button */
+  color: #b21d40;
+  /* text color */
+}
+
+[data-theme="dark"] .btn.ghost.hero-btn:hover {
+  background: rgba(178, 29, 64, 0.1);
+  /* subtle hover fill */
+}
+
+/* Sections */
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* Services */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columns */
+  grid-template-rows: repeat(2, auto);
+  /* 2 rows, height auto */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 1rem auto 0 auto;
+}
+
+.service-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+/* About Section Enhancements */
+.about-section {
+  background: var(--card-bg);
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  color: var(--text-main);
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.about-card h3 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .about-section {
+  background: rgba(0, 0, 0, 0.6);
+  color: #eee;
+}
+
+[data-theme="dark"] .about-card {
+  background: rgba(20, 20, 30, 0.7);
+  color: #eee;
+}
+
+[data-theme="dark"] .about-card h3 {
+  color: #b21d40;
+  /* Accent for dark mode */
+}
+
+/* Dark mode for service icons */
+[data-theme="dark"] .service-card .service-icon {
+  filter: invert(100%) brightness(200%);
+}
+
+.learn-more-btn {
+  margin-top: 1rem;
+}
+
+/* Reviews */
+.reviews-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.reviews-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  max-width: 80%;
+  padding-top: 10px;
+}
+
+.review-card {
+  background: var(--card-bg);
+  min-width: 250px;
+  padding: 1rem;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.review-arrow {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Floating Label Container */
+.floating-label {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* Input and Textarea Styles */
+.floating-label input,
+.floating-label textarea {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  border: 2px solid #ff5b4d; /* Default border colour */
+  border-radius: 10px;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--text-main);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-label input:focus,
+.floating-label textarea:focus {
+  border-color: #4f0e08; /* Darker red when focused */
+  outline: none;
+  background-color: rgba(79, 14, 8, 0.05); /* Optional subtle focus background */
+}
+
+/* Label Styling */
+.floating-label label {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  background: var(--bg-main); /* Keeps background clear when floating */
+  padding: 0 0.25rem;
+  color: #777;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+/* When input is focused or has text */
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:focus + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+  top: -0.6rem; /* Float above the input box */
+  left: 0.5rem;
+  font-size: 0.75rem;
+  color: #4f0e08; /* Match the focus border colour */
+}
+
+[data-theme="dark"] .floating-label input,
+[data-theme="dark"] .floating-label textarea {
+  border-color: #6c63ff; /* Accent colour for dark mode */
+  color: #eaeaea; /* Light text */
+  background-color: rgba(0, 0, 0, 0.2); /* Subtle dark background */
+}
+
+[data-theme="dark"] .floating-label input:focus,
+[data-theme="dark"] .floating-label textarea:focus {
+  border-color: #4a3cff; /* Slightly brighter focus colour */
+  background-color: rgba(108, 99, 255, 0.05);
+}
+
+[data-theme="dark"] .floating-label label {
+  background: var(--bg-main); /* Dark background behind label */
+  color: #aaa; /* Softer grey text for labels */
+}
+
+[data-theme="dark"] .floating-label input:focus + label,
+[data-theme="dark"] .floating-label input:not(:placeholder-shown) + label,
+[data-theme="dark"] .floating-label textarea:focus + label,
+[data-theme="dark"] .floating-label textarea:not(:placeholder-shown) + label {
+  color: #6c63ff; /* Accent colour for active label in dark mode */
+}
+
+.btn.primary.submit {
+  margin-top: 10px;
+}
+
+
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.3s, background 0.3s;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  filter: invert(100%) brightness(200%);
+}
+
+
+
+.footer {
+  background: var(--card-bg);
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  color: var(--text-main);
+}
+
+/* <===========================================> leave-a-review <===========================================>*/
+/* Review Cards */
+.review-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  color: var(--text-main);
+}
+
+/* Floating labels work same as contact form */
+/* Add select styling */
+.floating-label select {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  border: 2px solid #ff5b4d;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--text-main);
+  transition: border-color 0.3s ease;
+}
+
+.floating-label select:focus {
+  border-color: #4f0e08;
+  outline: none;
+}
+
+
+
+
+@media (max-width:768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-wrapper {
+    flex-direction: column;
+  }
+
+  .reviews-carousel {
+    max-width: 100%;
+  }
+
+  .hero-logo {
+    width: 90vw;
+  }
+}

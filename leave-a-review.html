@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave a Review</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="section" id="leave-review">
+    <h2 class="section-title">Leave a Review</h2>
+
+    <form id="review-form" class="contact-form">
+      <div class="floating-label">
+        <input type="text" id="name" placeholder=" " required>
+        <label for="name">Full Name</label>
+      </div>
+
+      <div class="floating-label">
+        <input type="email" id="email" placeholder=" " required>
+        <label for="email">Email</label>
+      </div>
+
+      <div class="floating-label">
+        <select id="rating" required>
+          <option value="" disabled selected hidden></option>
+          <option value="1">⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+        <label for="rating">Rating</label>
+      </div>
+
+      <div class="floating-label">
+        <textarea id="message" rows="4" placeholder=" " required></textarea>
+        <label for="message">Your Review</label>
+      </div>
+
+      <button type="submit" class="btn primary">Submit Review</button>
+    </form>
+
+    <div id="reviews-list" class="section"></div>
+  </section>
+
+  <script src="leave-a-review.js"></script>
+</body>
+</html>

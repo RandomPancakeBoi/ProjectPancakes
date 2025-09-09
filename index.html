@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectPancakes</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-left">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="reviews.html" class="nav-link">Reviews</a>
+            <a href="leave-a-review.html" class="nav-link">Leave a Review</a>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle">
+            <svg id="theme-icon" class="theme-icon" viewBox="0 0 24 24">
+                <path d="M21.64 13.64a9 9 0 01-11.28-11.28 9 9 0 1011.28 11.28z" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <img src="pfp.png" alt="Project Pancakes Logo" class="hero-logo" id="logo">
+        <div class="hero-content">
+            <p class="hero-subtitle">At ProjectPancakes, I prioritise secure, privacy-first programming and solve your
+                tech problems
+                efficiently.</p>
+            <div class="hero-actions">
+                <a href="#services" class="btn primary hero-btn">See Services</a>
+                <a href="#contact" class="btn ghost hero-btn">Contact Us</a> <!-- Ghost style -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Who I Am Section -->
+    <section class="section about-section" id="about">
+        <h2 class="section-title">Who I Am</h2>
+        <div class="about-cards">
+            <div class="about-card">
+                <h3>Hello, I’m Oliver 👋</h3>
+                <p>My mission is simple: I want to make tech repairs, upgrades, and advice accessible to everyone,
+                    regardless of their prior knowledge.</p>
+            </div>
+            <div class="about-card">
+                <h3>A Passion for Tech ⚡</h3>
+                <p>Ever since I was a little kid, I loved taking random gadgets and items apart just to see how they
+                    worked. That curiosity inspired me to start ProjectPancakes in 2018.</p>
+            </div>
+            <div class="about-card">
+                <h3>Why I’m Different ✨</h3>
+                <p>I take time with each customer, answer questions, and make sure you feel confident about your tech.
+                    Your experience matters just as much as the solution.</p>
+            </div>
+            <div class="about-card">
+                <h3>Here to Help 🤝</h3>
+                <p>Tech should be simple and stress-free for everyone. Whether you need help or just a friendly opinion,
+                    I’ll make sure you get the best service, every time.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- What We Do Section -->
+    <section class="section" id="services">
+        <h2 class="section-title">What I Do</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="svg-website.svg" class="service-icon" alt="Custom Websites">
+                <h3>Custom Websites</h3>
+                <p>Fast, secure websites, custom portfolios, online stores, and privacy-focused designs that showcase
+                    your brand and bring your vision to life - free web hosting available on certain plans.</p>
+                <a href="services.html" class="btn primary learn-more-btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <img src="svg-phone.svg" class="service-icon" alt="Mobile Repairs">
+                <h3>Mobile Repairs</h3>
+                <p>Mobile phone screen replacements, battery swapping, back glass repairs and manual updates, keeping
+                    your data safe while extending your devices life.</p>
+                <a href="services.html" class="btn primary learn-more-btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <img src="svg-computer.svg" class="service-icon" alt="Desktop Solutions">
+                <h3>Desktop Solutions</h3>
+                <p>Data cleansing, custom PC builds, Windows reinstalls, and upgrading almost any computer to Windows 11
+                    - even older devices.</p>
+                <a href="services.html" class="btn primary learn-more-btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <img src="svg-console.svg" class="service-icon" alt="Console Solutions">
+                <h3>Console Care</h3>
+                <p>Repairs for consoles and controllers, including internal component swaps, fixing stick drift, and
+                    cleaning of any gaming device.</p>
+                <a href="services.html" class="btn primary learn-more-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section" id="reviews-preview">
+        <h2 class="section-title">What Customers Say</h2>
+        <div class="reviews-wrapper">
+            <button class="review-arrow" id="prev-review">&#8592;</button>
+            <div class="reviews-carousel" id="reviews-carousel"></div>
+            <button class="review-arrow" id="next-review">&#8594;</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form"
+            enctype="multipart/form-data">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="0538e631-2d71-4b7a-b39a-387e788b149e">
+
+            <!-- Floating Name Input -->
+            <div class="floating-label">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">Full Name</label>
+            </div>
+
+            <!-- Floating Email Input -->
+            <div class="floating-label">
+                <input type="email" id="email" name="email" placeholder=" ">
+                <label for="email">Email (Optional)</label>
+            </div>
+
+            <!-- Floating Phone Input -->
+            <div class="floating-label">
+                <input type="tel" id="phone" name="phone" placeholder=" ">
+                <label for="phone">Phone (Optional)</label>
+            </div>
+
+            <!-- Floating Textarea -->
+            <div class="floating-label">
+                <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                <label for="message">Message</label>
+            </div>
+
+            <!-- Hidden File Input -->
+            <input type="file" id="contact-photo" name="photo" accept="image/*" style="display: none;">
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn primary">Send Message</button>
+        </form>
+    </section>
+
+
+    <!-- Social Button Section -->
+    <section class="section" id="socials">
+        <h2 class="section-title">Follow Me</h2>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/projectpancakesofficial/" class="social-btn" target="_blank">
+                <img src="svgsocial-instagram.svg" alt="Instagram" class="social-icon">
+                Instagram
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=%2B4407443639793&text&type=phone_number&app_absent=0"
+                class="social-btn" target="_blank">
+                <img src="svgsocial-whatsapp.svg" alt="Whatsapp" class="social-icon">
+                Whatsapp
+            </a>
+            <a href="https://www.twitch.tv/randompancakeboi" class="social-btn" target="_blank">
+                <img src="svgsocial-twitch.svg" alt="Twitch" class="social-icon">
+                Twitch
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 ProjectPancakes - All media on this site is created and shared by me.</p>
+    </footer>
+
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>
